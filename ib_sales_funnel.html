@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Interior bazzar — Verified interior clients, matched to you alone</title>
+<meta name="description" content="Each verified, ready-to-talk interior enquiry goes to one business only — never broadcast to your competitors. For interior businesses. Govt-registered, MSME-certified." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F5F1EA; --bone-card:#FFFFFF; --bone-tint:#EFEAE0;
+  --forest:#085041; --forest-deep:#053b30; --accent:#1D9E75; --amber:#BA7517;
+  --ink:#1c2420; --muted:#5c665f; --line:#e2dccf; --err:#b3261e; --wa:#25D366;
+  --r:18px; --shadow:0 18px 50px -22px rgba(8,80,65,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bone-card);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body.no-scroll{overflow:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+/* ---------- promo / exclusivity banner ---------- */
+.promobar{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 11px;width:100%;border:0;cursor:pointer;font-family:inherit;background:var(--forest-deep);color:#dfeae5;font-size:13.5px;line-height:1.3;padding:11px 18px;text-align:center;transition:background .18s}
+.promobar:hover{background:#04332a}
+.promobar strong{font-weight:700;color:#fff}
+.pb-dot{width:7px;height:7px;border-radius:50%;background:var(--amber);flex:none;box-shadow:0 0 0 3px rgba(186,117,23,.22)}
+.pb-cta{color:var(--amber);font-weight:600;white-space:nowrap}
+.promobar:hover .pb-cta{text-decoration:underline}
+@media(max-width:560px){.promobar{font-size:12.5px;padding:10px 14px}}
+
+/* ---------- top bar (minimal, no outbound nav) ---------- */
+.topwrap{border-bottom:1px solid var(--line);background:var(--bone-card)}
+.top{max-width:1120px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:11px}
+.mark{position:relative;width:40px;height:40px;background:#0b0b0b;border-radius:11px;display:grid;place-items:center;flex:none}
+.mark span{font-family:"DM Serif Display",serif;font-style:italic;color:#fff;font-size:20px;line-height:1;letter-spacing:-1px;transform:translateX(-1px)}
+.mark::after{content:"";position:absolute;top:6px;right:6px;width:10px;height:10px;border-top:2px solid var(--amber);border-right:2px solid var(--amber)}
+.brand b{font-weight:700;font-size:17px;color:var(--forest);letter-spacing:-.2px}
+.brand b i{font-style:normal}
+.gov{font-size:11px;color:var(--muted);text-align:right;line-height:1.35}
+.gov strong{color:var(--forest);font-weight:600}
+
+/* ---------- HERO (two-column, form above the fold) ---------- */
+.hero{padding:30px 0 30px;background:var(--bone)}
+@media(min-width:920px){.hero{padding:48px 0 44px}}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:26px}
+@media(min-width:920px){.hero-grid{grid-template-columns:1.04fr .96fr;gap:48px;align-items:start}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin:0 0 16px}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--amber)}
+h1{color:var(--forest);font-size:clamp(30px,5.4vw,50px);line-height:1.04;letter-spacing:-.5px;margin:0 0 16px;font-family:"DM Serif Display",serif;font-style:italic;font-weight:400}
+h1 .u{position:relative;white-space:nowrap}
+h1 .u::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.13em;background:var(--amber);opacity:.5;border-radius:2px}
+.sub{font-size:clamp(15.5px,2.1vw,18px);color:var(--muted);max-width:40ch;margin:0 0 22px}
+.points{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:12px}
+.points li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px}
+.points .pic{flex:none;width:24px;height:24px;border-radius:50%;background:#eef4f1;display:grid;place-items:center;margin-top:1px}
+.points .pic svg{width:14px;height:14px;stroke:var(--forest);fill:none;stroke-width:2.4}
+.points b{font-weight:600;color:var(--forest)}
+.trust{display:flex;flex-wrap:wrap;gap:7px 16px;align-items:center;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+.trust b{color:var(--forest);font-weight:600}
+.trust .star{color:var(--amber)}
+.hero-mcta{display:block;width:100%;margin:2px 0 22px;font-size:16px}
+@media(min-width:920px){.hero-mcta{display:none}}
+@media(max-width:919px){.hero .form-col{display:none}}
+.hero-offer{display:inline-flex;align-items:center;gap:8px;background:rgba(186,117,23,.12);border:1px solid rgba(186,117,23,.35);color:#6b4410;font-size:13px;font-weight:600;line-height:1.3;padding:8px 14px;border-radius:99px;margin:0}
+.hero-offer svg{width:15px;height:15px;flex:none;stroke:var(--amber);fill:none;stroke-width:1.9}
+.hero-offer b{color:#9a610f;font-weight:700}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.hero-offer.alt{background:rgba(8,80,65,.07);border-color:rgba(8,80,65,.22);color:var(--forest)}
+.hero-offer.alt svg{stroke:var(--forest)}
+.hero-offer.alt b{color:var(--forest)}
+
+/* ---------- logo strip ---------- */
+.logos{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bone-card);padding:26px 0}
+.logo-lead{text-align:center;font-size:13px;color:var(--muted);margin:0 0 18px}
+.logo-lead b{color:var(--forest);font-weight:700}
+.logo-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px}
+.logo-chip{background:var(--bone);border:1px solid var(--line);border-radius:10px;padding:9px 16px;font-weight:700;font-size:14px;color:var(--forest);letter-spacing:-.2px;white-space:nowrap}
+.gmark{width:18px;height:18px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-weight:700;font-size:11px;color:#4285F4;font-family:Arial,sans-serif}
+.gstars{color:var(--amber);letter-spacing:1px;font-size:12px}
+
+/* ---------- buttons ---------- */
+.btn{font-family:inherit;font-size:16px;font-weight:600;border-radius:12px;cursor:pointer;padding:15px 22px;border:1.5px solid transparent;transition:.18s;text-decoration:none;text-align:center;display:inline-block}
+.btn.primary{background:var(--forest);color:var(--bone);box-shadow:0 10px 26px -12px rgba(8,80,65,.7)}
+.btn.primary:hover{background:var(--forest-deep);transform:translateY(-1px)}
+.btn.amber{background:var(--amber);color:#1c1300;box-shadow:0 12px 30px -12px rgba(0,0,0,.5)}
+.btn.amber:hover{transform:translateY(-2px)}
+.btn.offer{background:var(--amber);color:#1c1300;border:none;position:relative;overflow:hidden;box-shadow:0 12px 28px -12px rgba(186,117,23,.75)}
+.btn.offer:hover{transform:translateY(-2px);background:#a9690f}
+.btn.offer::after{content:"";position:absolute;top:0;left:-60%;width:38%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:shine 3.4s ease-in-out infinite;pointer-events:none}
+@keyframes shine{0%{left:-60%}50%{left:135%}100%{left:135%}}
+@media(prefers-reduced-motion:reduce){.btn.offer::after{display:none}}
+.btn:disabled{opacity:.55;cursor:not-allowed;transform:none!important}
+
+/* ---------- section base ---------- */
+section.band{padding:54px 0}
+@media(min-width:760px){section.band{padding:70px 0}}
+.kick{text-align:center;font-size:12.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+.kick.light{color:var(--amber)}
+.h2{text-align:center;color:var(--forest);font-size:clamp(26px,4.4vw,37px);line-height:1.1;margin:0 auto 14px;max-width:19ch;font-family:"DM Serif Display",serif;font-style:italic}
+.h2.light{color:#fff}
+.lead{text-align:center;color:var(--muted);font-size:16px;max-width:52ch;margin:0 auto 40px}
+.lead.light{color:#b6c5be}
+.mid-cta{text-align:center;margin-top:38px}
+
+/* ---------- difference (dark) ---------- */
+.diff{background:var(--forest-deep);color:#dfeae5}
+.compare{display:grid;grid-template-columns:1fr;gap:18px;max-width:860px;margin:0 auto}
+@media(min-width:760px){.compare{grid-template-columns:1fr 1fr;gap:22px}}
+.cc{border-radius:16px;padding:26px 24px;border:1px solid rgba(255,255,255,.14)}
+.cc.bad{background:rgba(255,255,255,.04)}
+.cc.good{background:#0b6b56;border-color:#0b6b56}
+.cc .tag{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 14px;display:inline-block;padding:5px 11px;border-radius:99px}
+.cc.bad .tag{background:rgba(255,255,255,.1);color:#cdd9d3}
+.cc.good .tag{background:var(--amber);color:#1c1300}
+.cc h3{font-size:19px;color:#fff;margin:0 0 14px;font-family:"DM Serif Display",serif;font-style:italic}
+.flow{display:flex;align-items:center;gap:8px;margin:0 0 16px;flex-wrap:wrap}
+.node{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;flex:none}
+.node svg{width:18px;height:18px;fill:none;stroke-width:1.8}
+.node.src{background:#fff}.node.src svg{stroke:var(--forest)}
+.node.biz{background:rgba(255,255,255,.16);color:#fff;font-size:12px;font-weight:700}
+.node.you{background:var(--amber);color:#1c1300;font-weight:700;font-size:12px}
+.arr{color:#7fa097;font-size:18px}
+.cc.good .arr{color:#bfe0d4}
+.cc ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.cc li{font-size:14px;display:flex;gap:9px;align-items:flex-start;color:#cfddd7}
+.cc.good li{color:#eaf4ef}
+.cc li .x{color:#e88}.cc li .v{color:#9fe6c8}
+
+/* ---------- how it works ---------- */
+.aqc{display:grid;grid-template-columns:1fr;gap:16px;max-width:920px;margin:0 auto 8px}
+@media(min-width:760px){.aqc{grid-template-columns:repeat(3,1fr)}}
+.phase{background:var(--bone-card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;position:relative;box-shadow:0 8px 26px -16px rgba(8,80,65,.30)}
+.phase .pi{width:46px;height:46px;border-radius:12px;background:#eef4f1;display:grid;place-items:center;margin-bottom:14px}
+.phase .pi svg{width:24px;height:24px;stroke:var(--forest);fill:none;stroke-width:1.8}
+.phase .ph{font-family:"DM Serif Display",serif;font-style:italic;color:var(--amber);font-size:13px;letter-spacing:.05em;margin:0 0 4px}
+.phase b{display:block;color:var(--forest);font-size:19px;margin:0 0 8px;font-family:"DM Serif Display",serif;font-style:italic}
+.phase p{margin:0;color:var(--muted);font-size:14px}
+.levels{max-width:680px;margin:30px auto 0;background:var(--bone-card);border:1px solid var(--line);border-radius:16px;padding:6px 22px;box-shadow:0 8px 26px -16px rgba(8,80,65,.30)}
+.lvl{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.lvl:last-child{border-bottom:0}
+.lvl .ln{flex:none;width:30px;height:30px;border-radius:8px;background:var(--forest);color:var(--bone);font-size:13px;font-weight:700;display:grid;place-items:center}
+.lvl b{color:var(--forest);font-weight:600;font-size:15px}
+.lvl span{color:var(--muted);font-size:13.5px}
+
+/* ---------- proof ---------- */
+.proof{background:var(--bone)}
+.cases{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:760px){.cases{grid-template-columns:repeat(3,1fr)}}
+.case{background:var(--bone-card);border:1px solid var(--line);border-radius:16px;padding:24px 22px;display:flex;flex-direction:column}
+.case .cn{font-weight:700;color:var(--forest);font-size:16px}
+.case .ct{font-size:12.5px;color:var(--muted);margin:2px 0 14px}
+.case .quote{font-size:14.5px;color:var(--ink);line-height:1.55;flex:1}
+.case-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.gbadge{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.gbadge b{color:var(--ink)}
+.rev{font-size:12.5px;color:var(--muted);font-style:italic;text-align:right}
+
+/* ---------- payment note ---------- */
+.pay-note{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:13px;font-size:12.5px;color:var(--muted);text-align:center}
+.pay-note svg{width:16px;height:16px;flex:none;stroke:var(--forest);fill:none;stroke-width:1.8}
+.pay-note b{color:var(--forest);font-weight:600}
+
+/* ---------- sample enquiry card ---------- */
+.sample-sec{background:var(--bone)}
+.enq-wrap{max-width:440px;margin:0 auto}
+.enq-card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.enq-head{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;border-bottom:1px solid var(--line);background:#f1f6f3}
+.enq-badge{display:inline-flex;align-items:center;gap:7px;font-weight:700;color:var(--forest);font-size:14px}
+.enq-badge svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:2.4}
+.enq-sample{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#1c1300;background:var(--amber);padding:4px 10px;border-radius:99px}
+.enq-rows{padding:6px 20px}
+.enq-row{display:flex;gap:13px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+.enq-row:last-child{border-bottom:0}
+.enq-row>svg{width:19px;height:19px;flex:none;stroke:var(--forest);fill:none;stroke-width:1.7;margin-top:2px}
+.enq-row .col{display:flex;flex-direction:column}
+.el{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ev{font-size:14.5px;color:var(--ink);font-weight:500}
+.masked{font-size:11.5px;color:var(--accent);font-weight:600;margin-left:7px}
+.enq-foot{display:flex;align-items:center;gap:9px;padding:13px 20px;background:#f1f6f3;font-size:12.5px;color:var(--muted)}
+.enq-foot svg{width:16px;height:16px;flex:none;stroke:var(--forest);fill:none;stroke-width:2}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:680px;margin:0 auto}
+.fq{border-bottom:1px solid var(--line)}
+.fq summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:600;color:var(--forest);font-size:16px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary::after{content:"+";font-size:23px;color:var(--amber);font-weight:400;line-height:1;flex:none}
+.fq[open] summary::after{content:"–"}
+.fq p{margin:-2px 0 18px;color:var(--muted);font-size:14.5px;line-height:1.6;max-width:60ch}
+
+/* ---------- closing ---------- */
+.closing-form{background:var(--forest-deep)}
+.closing-card-wrap{max-width:480px;margin:0 auto}
+
+/* ---------- form card ---------- */
+.card{background:var(--bone-card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.card-top{height:5px;flex:none;background:linear-gradient(90deg,var(--forest),var(--accent) 60%,var(--amber))}
+.offer-ribbon{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--forest-deep);color:#fff;font-size:14px;font-weight:600;line-height:1.3;padding:12px 16px;text-align:center;letter-spacing:.02em}
+.offer-ribbon svg{width:16px;height:16px;flex:none;stroke:#fff;fill:none;stroke-width:1.9}
+.offer-ribbon strong{font-weight:800;color:#fff}
+.card-head{padding:20px 22px 12px;flex:none}
+.fkicker{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin:0 0 12px}
+.fkicker .fdot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(29,158,117,.18)}
+.prog{display:flex;gap:6px;margin-bottom:13px}
+.prog i{height:5px;flex:1;border-radius:99px;background:var(--bone-tint);overflow:hidden;position:relative}
+.prog i::after{content:"";position:absolute;inset:0;width:0;background:var(--amber);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.prog i.done::after,.prog i.active::after{width:100%}
+.step-label{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.q{color:var(--forest);font-size:21px;line-height:1.15;margin:6px 0 2px;font-family:"DM Serif Display",serif;font-style:italic}
+.hint{font-size:13.5px;color:var(--muted);margin:0}
+.card-body{padding:16px 22px 18px;flex:1 1 auto;min-height:0}
+.card-foot{flex:none;padding:14px 22px 18px;border-top:1px solid var(--line);background:var(--bone-card)}
+.secure-line{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:11px;font-size:12px;color:var(--muted);text-align:center}
+.secure-line svg{width:15px;height:15px;flex:none;stroke:var(--forest);fill:none;stroke-width:1.8}
+.secure-line b{color:var(--forest);font-weight:600}
+.step{display:none;animation:fade .4s ease both}
+.step.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative;border:1.5px solid var(--line);background:var(--bone);border-radius:11px;padding:10px 13px;cursor:pointer;text-align:left;font-family:inherit;font-size:14px;font-weight:500;color:var(--ink);transition:.15s;display:inline-flex;align-items:center;gap:8px;line-height:1.1}
+.opt:hover{border-color:var(--forest)}
+.opt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.opt .oic{width:17px;height:17px;flex:none;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.opt.sel{border-color:var(--forest);background:#eef4f1;color:var(--forest);font-weight:600}
+.opt.sel::after{content:"✓";margin-left:1px;color:var(--forest);font-weight:700;font-size:12px}
+.field{margin-bottom:14px}
+.field:last-child{margin-bottom:0}
+label.lab{display:block;font-size:13px;font-weight:600;color:var(--forest);margin:0 0 6px}
+label.lab .opt-tag{font-weight:500;color:var(--muted)}
+.in{width:100%;font-family:inherit;font-size:16px;color:var(--ink);background:var(--bone);border:1.5px solid var(--line);border-radius:11px;padding:13px 14px;transition:.16s}
+.in:focus{outline:none;border-color:var(--forest);background:#fff}
+.in.bad{border-color:var(--err);background:#fdf3f2}
+.phone-row{display:flex;gap:8px}
+.phone-row .cc{flex:none;width:62px;display:grid;place-items:center;background:var(--bone-tint);border:1.5px solid var(--line);border-radius:11px;font-size:15px;font-weight:600;color:var(--forest)}
+.phone-row .in{flex:1}
+.errmsg{display:none;color:var(--err);font-size:12.5px;margin:6px 2px 0}
+.errmsg.show{display:block}
+select.in{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23085041' stroke-width='2.5'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+.consent{display:flex;gap:10px;align-items:flex-start;margin:16px 0 4px;cursor:pointer}
+.consent input{flex:none;width:19px;height:19px;margin-top:2px;accent-color:var(--forest)}
+.consent span{font-size:12.5px;color:var(--muted);line-height:1.45}
+.consent a{color:var(--forest);font-weight:600}
+.nav{display:flex;gap:10px;margin-top:0}
+.nav .btn{flex:1}
+.btn.ghost{background:transparent;border-color:var(--line);color:var(--forest)}
+.btn.ghost.back{flex:0 0 auto;width:54px;padding:15px 0;font-size:18px}
+.reassure{display:flex;gap:7px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:15px;font-size:12px;color:var(--muted);text-align:center}
+.reassure b{color:var(--forest);font-weight:600}
+.sep{opacity:.4}
+
+/* ---------- thank you + whatsapp ---------- */
+.thanks{display:none;text-align:center;padding:34px 24px 28px;animation:fade .5s ease both}
+.thanks.on{display:block}
+.tick{width:62px;height:62px;border-radius:50%;background:#eef4f1;display:grid;place-items:center;margin:0 auto 18px;border:1.5px solid var(--forest)}
+.thanks h2{color:var(--forest);font-size:26px;margin:0 0 8px;font-family:"DM Serif Display",serif;font-style:italic}
+.thanks>p{color:var(--muted);font-size:15px;max-width:36ch;margin:0 auto 4px}
+.next{text-align:left;max-width:360px;margin:22px auto 0;display:grid;gap:12px}
+.next .r{display:flex;gap:11px;align-items:flex-start;font-size:14px}
+.next .n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--forest);color:var(--bone);font-size:12px;font-weight:700;display:grid;place-items:center}
+.wa-block{margin:24px auto 0;max-width:360px;border-top:1px solid var(--line);padding-top:20px}
+.wa-lead{font-size:13.5px;color:var(--muted);margin:0 0 12px;text-align:center}
+.wa-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;background:var(--wa);color:#063d23;font-weight:700;font-size:15.5px;padding:14px 18px;border-radius:12px;text-decoration:none;transition:.18s;box-shadow:0 8px 20px -10px rgba(37,211,102,.8)}
+.wa-btn:hover{filter:brightness(.97);transform:translateY(-1px)}
+.wa-timer-wrap{font-size:12.5px;color:var(--muted);margin:13px 0 0;text-align:center}
+.wa-timer{font-variant-numeric:tabular-nums;color:var(--forest);font-weight:700}
+
+/* ---------- sticky CTA ---------- */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:900;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -18px rgba(8,80,65,.4);transform:translateY(120%);transition:transform .35s cubic-bezier(.4,0,.2,1);padding:12px 0;padding-bottom:max(12px,env(safe-area-inset-bottom))}
+.sticky-cta.show{transform:translateY(0)}
+.sc-in{max-width:1120px;margin:0 auto;padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.sc-text{font-size:14.5px;color:var(--ink);font-weight:500}
+.sc-text b{color:var(--forest);font-weight:700}
+.sticky-cta .btn{padding:13px 22px;white-space:nowrap}
+@media(max-width:600px){.sc-text{display:none}.sticky-cta .btn{flex:1}}
+
+/* ---------- modal ---------- */
+.modal-overlay{position:fixed;inset:0;background:rgba(5,33,27,.62);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;padding:32px 16px;z-index:1000;overflow-y:auto}
+.modal-overlay.on{display:flex;animation:fade .25s ease both}
+.modal-card{position:relative;width:100%;max-width:460px;margin:auto}
+.modal-close{position:absolute;top:-14px;right:-6px;z-index:2;width:36px;height:36px;border-radius:50%;border:none;background:var(--forest);color:#fff;font-size:22px;line-height:1;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+.modal-close:hover{background:var(--forest-deep)}
+.modal-card .card{max-height:86vh}
+.modal-card .card-body{overflow-y:auto;-webkit-overflow-scrolling:touch;min-height:0}
+.modal-card .thanks{overflow-y:auto}
+.doc-overlay{z-index:1100}
+.doc-shell{position:relative;width:100%;max-width:640px;margin:auto}
+.doc-card{background:#fff;border-radius:16px;max-height:84vh;overflow-y:auto;padding:30px 26px;box-shadow:0 24px 60px -20px rgba(5,33,27,.5)}
+.doc-card h3{font-family:"DM Serif Display",serif;font-style:italic;color:var(--forest);font-size:26px;margin:0 0 3px}
+.doc-updated{color:var(--muted);font-size:12.5px;margin:0 0 16px}
+.doc-card h4{color:var(--forest);font-size:15px;margin:18px 0 5px;font-weight:700}
+.doc-card p{font-size:14px;color:#33403a;margin:0 0 9px;line-height:1.6}
+.doc-card a{color:var(--forest);font-weight:600}
+.doc-content{display:none}
+.doc-content.on{display:block}
+@media(max-width:520px){.modal-close{top:8px;right:8px;background:rgba(8,80,65,.92)}}
+
+/* ---------- footer ---------- */
+footer{background:var(--forest-deep);color:#cdd9d3;padding:40px 22px 110px}
+.fwrap{max-width:1120px;margin:0 auto;display:grid;gap:16px}
+@media(min-width:760px){.fwrap{grid-template-columns:1.4fr 1fr;gap:40px}footer{padding-bottom:46px}}
+.fbrand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.fbrand b{color:#fff;font-size:16px;font-weight:700}
+footer p{font-size:13px;line-height:1.6;margin:0 0 6px;color:#b6c5be}
+footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+.flinks{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;margin-top:6px}
+.fco{font-size:11.5px;color:#8ba197;border-top:1px solid rgba(255,255,255,.12);padding-top:14px;margin-top:6px;line-height:1.6}
+.fsig{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17px;color:#dfeae5}
+@media(max-width:560px){.opt{font-size:14px;padding:9px 12px}}
+
+/* phone: compact form + full-height modal sheet that always fits the screen */
+@media(max-width:600px){
+  .card-head{padding:12px 16px 9px}
+  .card-body{padding:13px 16px 16px}
+  .card-foot{padding:12px 16px 16px}
+  .step-label{font-size:11px}
+  .prog{margin-bottom:9px}
+  .q{font-size:17px;line-height:1.14;margin:4px 0 2px}
+  .hint{font-size:12.5px}
+  .opts{gap:8px}
+  .opt{padding:9px 11px;font-size:14px;border-radius:11px}
+  .field{margin-bottom:11px}
+  .in{padding:12px 13px}
+  .secure-line{margin-top:9px;font-size:11.5px}
+
+  .modal-overlay{padding:0;align-items:stretch}
+  .modal-card{max-width:none;width:100%;height:100vh;height:100dvh;margin:0}
+  .modal-card .card{height:100vh;height:100dvh;max-height:none;border-radius:0;border:0}
+  .modal-card .card-foot{box-shadow:0 -8px 20px -14px rgba(8,80,65,.45)}
+  .modal-card .card-head{padding-right:54px}
+  .modal-card .thanks{flex:1 1 auto}
+  .modal-close{width:32px;height:32px;font-size:20px;top:9px;right:10px}
+}
+.card-head{scroll-margin-top:84px}
+
+/* form trust strip */
+.form-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;padding:11px 16px;border-bottom:1px solid var(--line);background:#fbfaf7}
+.form-trust .ft{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--forest);letter-spacing:.01em}
+.form-trust .ft svg{width:13px;height:13px;stroke:var(--accent);fill:none;stroke-width:2.2}
+
+/* phone view: bump highlighted / promotional text for legibility + trust */
+@media(max-width:760px){
+  .promobar{font-size:14px}
+  .eyebrow{font-size:14.5px}
+  .gov{font-size:13px}
+  .hero-offer{font-size:15px}
+  .offer-ribbon{font-size:15px}
+  .trust{font-size:14.5px}
+  .form-trust .ft{font-size:12.5px}
+}
+</style>
+
+<!-- ============ ANALYTICS (live — from production salesprospect.interiorbazzar.com) ============
+     This page fires structured events for EVERY funnel step into window.dataLayer:
+     ib_form_start, ib_step_view (with {step}), ib_step_back, ib_modal_open and ib_lead_submit.
+     GTM (below) listens on dataLayer, so you can wire GA4 / Google Ads conversion tags to the
+     ib_lead_submit event inside your existing GTM container — no code change needed here.
+     Meta conversions fire directly via the Pixel (fbq 'Lead' on submit). -->
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1739751447041999');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1739751447041999&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQHTS87B');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQHTS87B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ===== ICON SPRITE ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-kitchen" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9" cy="9" r="1.4"/><circle cx="15" cy="9" r="1.4"/><path d="M4 13h16"/></symbol>
+  <symbol id="ic-sofa" viewBox="0 0 24 24"><path d="M5 11V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2"/><path d="M3 12a2 2 0 0 1 2 2v3h14v-3a2 2 0 0 1 2-2"/><path d="M6 17v2M18 17v2"/></symbol>
+  <symbol id="ic-bath" viewBox="0 0 24 24"><path d="M12 3v3"/><path d="M7.5 10a4.5 4.5 0 0 1 9 0Z"/><path d="M9 14v1.5M12 14v2M15 14v1.5"/></symbol>
+  <symbol id="ic-blinds" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M4 8.5h16M4 12.5h16M4 16.5h16"/></symbol>
+  <symbol id="ic-ruler" viewBox="0 0 24 24"><path d="M3 17L17 3l4 4L7 21z"/><path d="M7 11l2 2M10 8l2 2M13 5l2 2"/></symbol>
+  <symbol id="ic-building" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></symbol>
+  <symbol id="ic-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></symbol>
+  <symbol id="ic-store" viewBox="0 0 24 24"><path d="M4 9l1.2-5h13.6L20 9"/><path d="M4 9a2.4 2.4 0 0 0 4.7 0 2.4 2.4 0 0 0 4.6 0 2.4 2.4 0 0 0 4.7 0"/><path d="M5 11.5V20h14v-8.5"/><path d="M9.5 20v-4.5h5V20"/></symbol>
+  <symbol id="ic-hospitality" viewBox="0 0 24 24"><path d="M3 18v-7a2 2 0 0 1 2-2h8a4 4 0 0 1 4 4v5"/><path d="M3 14h14"/><path d="M3 18v2M21 13v7"/><circle cx="7" cy="11" r="1.5"/></symbol>
+  <symbol id="ic-health" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8.5v7M8.5 12h7"/></symbol>
+  <symbol id="ic-education" viewBox="0 0 24 24"><path d="M3 9l9-4 9 4-9 4-9-4z"/><path d="M7 11v4.2c0 1.1 2.2 2.3 5 2.3s5-1.2 5-2.3V11"/><path d="M21 9v5"/></symbol>
+  <symbol id="ic-industrial" viewBox="0 0 24 24"><path d="M3 20V10l5 3v-3l5 3V8l5 3v8z"/><path d="M3 20h18"/></symbol>
+  <symbol id="ic-all" viewBox="0 0 24 24"><circle cx="7" cy="7" r="2.3"/><circle cx="17" cy="7" r="2.3"/><circle cx="7" cy="17" r="2.3"/><circle cx="17" cy="17" r="2.3"/></symbol>
+  <symbol id="ic-tag" viewBox="0 0 24 24"><path d="M3 12.5V5.5A2.5 2.5 0 0 1 5.5 3h7l8.5 8.5a2 2 0 0 1 0 2.8l-6.7 6.7a2 2 0 0 1-2.8 0L3 12.5z"/><circle cx="7.8" cy="7.8" r="1.5"/></symbol>
+  <symbol id="ic-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18M7 15h4"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7.5l8 5.5 8-5.5"/></symbol>
+  <symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="ic-wardrobe" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M12 3v18"/><path d="M9.5 10.5v2.5M14.5 10.5v2.5"/></symbol>
+  <symbol id="ic-brush" viewBox="0 0 24 24"><path d="M3 21c0-2.5 1.6-3.5 3.3-3.5 1.4 0 2.7 1 2.7 2.7C9 22 7.4 23 5.3 23 4 23 3 22.4 3 21z"/><path d="M8.5 17.5l8.5-8.5a2.1 2.1 0 0 1 3 3l-8.5 8.5"/></symbol>
+  <symbol id="ic-tiles" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></symbol>
+  <symbol id="ic-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></symbol>
+  <symbol id="ic-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 4.6a3.4 3.4 0 0 1 0 6.8M21 20a6 6 0 0 0-4.5-5.8"/></symbol>
+  <symbol id="ic-chart" viewBox="0 0 24 24"><path d="M4 5v15h16"/><path d="M8 15l3-4 3 2 4-6"/></symbol>
+  <symbol id="ic-briefcase" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+  <symbol id="ic-inbox" viewBox="0 0 24 24"><path d="M12 3v11"/><path d="M8 11l4 4 4-4"/><path d="M5 19h14"/></symbol>
+  <symbol id="ic-cpu" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></symbol>
+  <symbol id="ic-phone-check" viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/><path d="M15 4l2 2 4-4"/></symbol>
+</svg>
+
+<!-- ============ PROMO / EXCLUSIVITY BANNER ============ -->
+<button type="button" class="promobar js-openmodal">
+  <span class="pb-dot" aria-hidden="true"></span>
+  One verified client goes to <strong>one business — never your competitors.</strong>
+  <span class="pb-cta">Founding spots open · 25% off →</span>
+</button>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topwrap">
+  <div class="top">
+    <div class="brand">
+      <img src="data:image/png;base64,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" alt="Interior bazzar" width="40" height="40" style="width:40px;height:40px;border-radius:11px;display:block;flex:none" />
+      <b>Interior&nbsp;<i>bazzar</i></b>
+    </div>
+    <div class="gov"><strong>Govt. of India</strong> registered · <strong>MSME</strong> certified</div>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="lede">
+      <p class="eyebrow"><span class="dot"></span> For interior &amp; sanitary businesses</p>
+      <h1>The next client is verified, ready, and <span class="u">yours alone</span>.</h1>
+      <p class="sub">Directories sell one enquiry to everyone, then leave you to fight on price. We route each verified enquiry to a single business — and in your area, that business is you.</p>
+      <div class="hero-pills">
+        <span class="hero-offer"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tag"/></svg> <b>Founding offer</b> — 25% off all plans</span>
+        <span class="hero-offer alt"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg> <b>One spot per area</b> · EMI available</span>
+      </div>
+      <button type="button" class="btn offer hero-mcta js-openmodal">See if my area is still open →</button>
+      <ul class="points">
+        <li><span class="pic"><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg></span><span><b>One client, one business.</b> Routed to you alone — never resold to the firm down the road.</span></li>
+        <li><span class="pic"><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg></span><span><b>Verified before you ever call.</b> Real interest, real intent, a real timeline — confirmed by a human.</span></li>
+        <li><span class="pic"><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg></span><span><b>A profile, not a phone dump.</b> Your brand, your portfolio, and an always-on qualifier working for you.</span></li>
+      </ul>
+      <div class="trust">
+        <span><b>500+</b> businesses</span><span class="sep">·</span>
+        <span><b class="star">★</b> 4.5/5 on Google</span><span class="sep">·</span>
+        <span>Built by <b>25+ yr</b> experts</span>
+      </div>
+    </div>
+    <div class="form-col">
+      <div id="heroFormSlot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGO STRIP ============ -->
+<div class="logos">
+  <div class="wrap">
+    <p class="logo-lead">Already chosen by <b>500+</b> interior &amp; sanitary businesses across India</p>
+    <div class="logo-row">
+      <span class="logo-chip">Perfekte Küchen</span>
+      <span class="logo-chip">Hashmi Infrabuild</span>
+      <span class="logo-chip">Hightech Windows Blind</span>
+      <span class="logo-chip">AR Furnishing</span>
+      <span class="logo-chip">Ecovision</span>
+      <span class="logo-chip">Furnin Interior</span>
+      <span class="logo-chip">Vishal Interior</span>
+      <span class="logo-chip">Ayan Interior</span>
+      <span class="logo-chip">Hindustan Interiors</span>
+      <span class="logo-chip">PSC Studio</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ THE DIFFERENCE ============ -->
+<section class="band diff">
+  <div class="wrap">
+    <p class="kick light">The difference</p>
+    <h2 class="h2 light">The same client — sold to eight of your rivals.</h2>
+    <p class="lead light">That's how directories make money: collect one enquiry, sell it to everyone, let you fight over the scraps. The moment you call, four others are already dialling. We refuse to run that model.</p>
+    <div class="compare">
+      <div class="cc bad">
+        <span class="tag">The directory way</span>
+        <h3>One enquiry → many businesses</h3>
+        <div class="flow">
+          <span class="node src"><svg viewBox="0 0 24 24"><use href="#ic-user"/></svg></span><span class="arr">→</span>
+          <span class="node biz">B1</span><span class="node biz">B2</span><span class="node biz">B3</span><span class="node biz">B4</span>
+        </div>
+        <ul>
+          <li><span class="x">✕</span> Everyone calls the same person at once</li>
+          <li><span class="x">✕</span> A price war starts before you say hello</li>
+          <li><span class="x">✕</span> Half the numbers are cold or already booked</li>
+        </ul>
+      </div>
+      <div class="cc good">
+        <span class="tag">The Interior bazzar way</span>
+        <h3>One enquiry → one business</h3>
+        <div class="flow">
+          <span class="node src"><svg viewBox="0 0 24 24"><use href="#ic-user"/></svg></span><span class="arr">→</span>
+          <span class="node you">YOU</span>
+        </div>
+        <ul>
+          <li><span class="v">✓</span> Verified for interest, intent and timing</li>
+          <li><span class="v">✓</span> Yours exclusively — no one else is called</li>
+          <li><span class="v">✓</span> A conversation, not a bidding war</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAMPLE ENQUIRY ============ -->
+<section class="band sample-sec">
+  <div class="wrap">
+    <p class="kick">What lands with you</p>
+    <h2 class="h2">This is what arrives — and only to you.</h2>
+    <p class="lead">Name verified. Number verified. Timeline known. One real person ready to talk — routed to no one but you.</p>
+    <div class="enq-wrap">
+      <div class="enq-card">
+        <div class="enq-head">
+          <span class="enq-badge"><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg> Verified enquiry</span>
+          <span class="enq-sample">Sample</span>
+        </div>
+        <div class="enq-rows">
+          <div class="enq-row"><svg viewBox="0 0 24 24"><use href="#ic-user"/></svg><div class="col"><span class="el">Client</span><span class="ev">Rohan S.<span class="masked">identity verified</span></span></div></div>
+          <div class="enq-row"><svg viewBox="0 0 24 24"><use href="#ic-pin"/></svg><div class="col"><span class="el">City</span><span class="ev">Gurugram · Delhi NCR</span></div></div>
+          <div class="enq-row"><svg viewBox="0 0 24 24"><use href="#ic-home"/></svg><div class="col"><span class="el">Project</span><span class="ev">Residential — 3BHK full interior</span></div></div>
+          <div class="enq-row"><svg viewBox="0 0 24 24"><use href="#ic-clock"/></svg><div class="col"><span class="el">Timeline</span><span class="ev">Ready to start in 2–4 weeks</span></div></div>
+          <div class="enq-row"><svg viewBox="0 0 24 24"><use href="#ic-phone-check"/></svg><div class="col"><span class="el">Contact</span><span class="ev">+91 98••• ••23<span class="masked">phone-verified</span></span></div></div>
+        </div>
+        <div class="enq-foot"><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg> Screened for interest · intent · urgency — routed to you only</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS (the automated system) ============ -->
+<section class="band">
+  <div class="wrap">
+    <p class="kick">How it works</p>
+    <h2 class="h2">Built to bring you the right client.</h2>
+    <p class="lead">A system that attracts demand, qualifies it hard, and routes the survivor to you — so the only calls you make are the ones worth making.</p>
+    <div class="aqc">
+      <div class="phase">
+        <div class="pi"><svg viewBox="0 0 24 24"><use href="#ic-inbox"/></svg></div>
+        <p class="ph">01 — Attract</p><b>We bring the demand</b>
+        <p>People actively looking for interior &amp; sanitary work find us and tell us what they need — day and night.</p>
+      </div>
+      <div class="phase">
+        <div class="pi"><svg viewBox="0 0 24 24"><use href="#ic-cpu"/></svg></div>
+        <p class="ph">02 — Qualify</p><b>We filter out the noise</b>
+        <p>Every enquiry runs a multi-level check for real interest, intent and timing — then a human confirms it by phone.</p>
+      </div>
+      <div class="phase">
+        <div class="pi"><svg viewBox="0 0 24 24"><use href="#ic-phone-check"/></svg></div>
+        <p class="ph">03 — Convert</p><b>You get the one that's left</b>
+        <p>A verified, exclusive enquiry lands with you alone — ready for a real conversation and a closed deal.</p>
+      </div>
+    </div>
+    <div class="levels">
+      <div class="lvl"><span class="ln">1</span><div><b>Interest</b> &nbsp;<span>— name, number, location and details verified</span></div></div>
+      <div class="lvl"><span class="ln">2</span><div><b>Intent</b> &nbsp;<span>— genuine enquiries retained, low-intent spam removed</span></div></div>
+      <div class="lvl"><span class="ln">3</span><div><b>Urgency</b> &nbsp;<span>— timeline checked: ready now, or planning ahead</span></div></div>
+      <div class="lvl"><span class="ln">4</span><div><b>Human verified</b> &nbsp;<span>— confirmed by a direct call from our team</span></div></div>
+    </div>
+    <div class="mid-cta"><button type="button" class="btn offer js-openmodal">Claim my founding spot →</button></div>
+  </div>
+</section>
+
+<!-- ============ PROOF ============ -->
+<section class="band proof">
+  <div class="wrap">
+    <p class="kick">Real businesses, real results</p>
+    <h2 class="h2">They stopped sharing clients with competitors.</h2>
+    <div class="cases">
+      <div class="case">
+        <div class="cn">Perfekte Küchen</div>
+        <div class="ct">Modular Kitchen</div>
+        <p class="quote">"I was unsure about trying it, but the results proved I made the right choice — genuine, quality clients."</p>
+        <div class="case-foot"><span class="gbadge"><span class="gmark">G</span><span class="gstars">★★★★★</span> <b>4.5</b></span><span class="rev">Mr. Kamal Mittal</span></div>
+      </div>
+      <div class="case">
+        <div class="cn">Hashmi Infrabuild</div>
+        <div class="ct">Interior Design</div>
+        <p class="quote">"The quality is far better — consistent enquiries from clients who are genuinely interested."</p>
+        <div class="case-foot"><span class="gbadge"><span class="gmark">G</span><span class="gstars">★★★★★</span> <b>4.5</b></span><span class="rev">Mr. Hashmi</span></div>
+      </div>
+      <div class="case">
+        <div class="cn">Hightech Windows Blind</div>
+        <div class="ct">Interior Decor</div>
+        <p class="quote">"I was a little nervous at first, but the quality here is way better than I expected."</p>
+        <div class="case-foot"><span class="gbadge"><span class="gmark">G</span><span class="gstars">★★★★★</span> <b>4.5</b></span><span class="rev">Mr. Vinod Gupta</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="band">
+  <div class="wrap">
+    <p class="kick">Questions</p>
+    <h2 class="h2">Good to know.</h2>
+    <div class="faq" style="margin-top:8px">
+      <details class="fq" open><summary>Is each enquiry really exclusive to me?</summary><p>Yes. Every enquiry is routed to one business only — never shared or resold to your competitors. That exclusivity is the heart of how we work, and the main thing that sets us apart from directories like Justdial or IndiaMART.</p></details>
+      <details class="fq"><summary>How do you verify an enquiry before sending it?</summary><p>Each one passes a multi-level check — genuine interest, real intent and urgency — and is then confirmed by a direct call from our team. By the time it reaches you, it's a real person ready to talk.</p></details>
+      <details class="fq"><summary>How is this different from Justdial or IndiaMART?</summary><p>They sell the same enquiry to many businesses at once, so you compete on price the moment you call. We do the opposite: one verified enquiry, one business — plus a profile and portfolio to build your brand, not just a stream of contacts.</p></details>
+      <details class="fq"><summary>What does it cost?</summary><p>It's an annual subscription, priced to how deeply you want enquiries qualified. Founding members lock 25% off every plan. We share the exact numbers on a short call once we understand your business — so you only pay for what fits, with no surprises and no obligation.</p></details>
+      <details class="fq"><summary>Can I pay in installments?</summary><p>Yes. We offer flexible payment, including EMI and installment options, so you can spread the cost rather than pay it all upfront. We'll walk you through the plan that fits your business on your call.</p></details>
+      <details class="fq"><summary>How soon will I start receiving enquiries?</summary><p>Once your profile is set up and verified, enquiries are matched and routed as they come in. Volume depends on demand in your category and city, which we'll walk you through honestly on the call.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING (inline form) ============ -->
+<section class="band closing-form" id="closing">
+  <div class="wrap">
+    <p class="kick light">Get started</p>
+    <h2 class="h2 light">See if your area is still open.</h2>
+    <p class="lead light">Under a minute. No obligation. Founding spots are limited to one business per area — we'll only reach out if yours is still open.</p>
+    <div class="closing-card-wrap"><div id="closingFormSlot"></div></div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="fwrap">
+    <div>
+      <div class="fbrand"><span class="mark" style="width:32px;height:32px;border-radius:9px"><span style="font-size:16px">ib</span></span><b>Interior bazzar</b></div>
+      <p>A dedicated interior &amp; sanitary platform that connects businesses with verified clients — matched one-to-one, never broadcast.</p>
+      <p class="fsig">Little things.</p>
+    </div>
+    <div>
+      <p><strong style="color:#fff">Contact</strong></p>
+      <p>Email: <a href="mailto:help@interiorbazzar.com">help@interiorbazzar.com</a></p>
+      <p>Phone: <a href="tel:+918882314255">+91&nbsp;88823&nbsp;14255</a></p>
+      <div class="flinks">
+        <a href="#" class="js-doc" data-doc="privacy">Privacy Policy</a>
+        <a href="#" class="js-doc" data-doc="terms">Terms of Use</a>
+        <a href="https://www.interiorbazzar.com">Website</a>
+      </div>
+      <p class="fco">Interior bazzar is a service of <strong style="color:#cdd9d3">Feelsafe Technology India Private Limited</strong>. CIN: U62090DL2024PTC434514. Your information is used only to process and route your enquiry and is never sold.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY CTA ============ -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sc-in">
+    <span class="sc-text"><b>Founding spots open</b> — one business per area, 25% off</span>
+    <button type="button" class="btn offer js-openmodal">Check my area →</button>
+  </div>
+</div>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-overlay" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Qualification form">
+  <div class="modal-card">
+    <button class="modal-close js-mclose" type="button" aria-label="Close">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ============ PRIVACY / TERMS MODAL ============ -->
+<div class="modal-overlay doc-overlay" id="docModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="doc-shell">
+    <button class="modal-close js-docclose" type="button" aria-label="Close">×</button>
+    <div class="doc-card">
+      <div id="docPrivacy" class="doc-content">
+        <h3>Privacy Policy</h3>
+        <p class="doc-updated">Last updated: June 2026</p>
+        <p>Interior bazzar is a service of <strong>Feelsafe Technology India Private Limited</strong> ("we", "us"). This explains how we handle your information when you submit an enquiry or use our pages.</p>
+        <h4>What we collect</h4>
+        <p>The details you provide in our form — your business name and your name, mobile number, city, the segments you work in, your role, and optionally your website or social handle — plus basic technical data (IP, device, usage) through cookies.</p>
+        <h4>How we use it</h4>
+        <p>To contact you about your enquiry by phone, WhatsApp or email, to assess whether our service is a fit, and to operate, improve and measure our service and advertising. <strong>We never sell your information.</strong></p>
+        <h4>Cookies &amp; advertising</h4>
+        <p>We use cookies and tools including the Meta (Facebook) Pixel and Google Ads &amp; Analytics to measure ad performance and improve the site. You can control cookies through your browser settings.</p>
+        <h4>Who we share with</h4>
+        <p>Only trusted service providers who help us operate — including our form processor (Formspree) and the analytics and advertising providers above — and where required by law.</p>
+        <h4>Retention &amp; your rights</h4>
+        <p>We keep your information only as long as needed for your enquiry and any legal requirements. To access, correct or delete your data, or to stop being contacted, email <a href="mailto:help@interiorbazzar.com">help@interiorbazzar.com</a>.</p>
+        <p style="margin-top:14px;color:#5c665f;font-size:12.5px">Feelsafe Technology India Private Limited · CIN U62090DL2024PTC434514</p>
+      </div>
+      <div id="docTerms" class="doc-content">
+        <h3>Terms of Use</h3>
+        <p class="doc-updated">Last updated: June 2026</p>
+        <p>By using our pages or submitting an enquiry you agree to these terms. Interior bazzar is a service of <strong>Feelsafe Technology India Private Limited</strong>.</p>
+        <h4>The service</h4>
+        <p>We connect interior and related businesses with verified client enquiries, matched exclusively on a one-to-one basis. We verify enquiries for genuine interest, intent and urgency, and facilitate introductions; we are not a party to any contract you form with a client.</p>
+        <h4>Eligibility &amp; your responsibilities</h4>
+        <p>The service is for businesses and professionals aged 18+. You agree to provide accurate information and to deal with introduced clients lawfully and professionally.</p>
+        <h4>Outcomes</h4>
+        <p>While we verify and exclusively route enquiries, we do not guarantee any specific number of enquiries, conversions, revenue or result. Volume depends on demand in your category and city.</p>
+        <h4>Subscriptions &amp; offers</h4>
+        <p>Access is offered on a subscription basis; applicable plans, fees and any promotional offers are shared with you directly and form part of our agreement once you subscribe.</p>
+        <h4>Disclaimers &amp; liability</h4>
+        <p>The service is provided "as is", without warranties to the extent permitted by law. We are not liable for indirect or consequential loss, including lost profits or business.</p>
+        <h4>Governing law</h4>
+        <p>These terms are governed by the laws of India, subject to the exclusive jurisdiction of the courts at Delhi. Questions? <a href="mailto:help@interiorbazzar.com">help@interiorbazzar.com</a>.</p>
+        <p style="margin-top:14px;color:#5c665f;font-size:12.5px">Feelsafe Technology India Private Limited · CIN U62090DL2024PTC434514</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FORM TEMPLATE (4 steps, interior-tuned) ============ -->
+<template id="funnelTpl">
+  <div class="card">
+    <div class="offer-ribbon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tag"/></svg> <strong>25% off all plans</strong> · easy EMI</div>
+    <div class="card-head js-head">
+      <div class="prog js-prog" aria-hidden="true"><i class="active"></i><i></i><i></i><i></i></div>
+      <div class="step-label js-stepLabel">Step 1 of 4</div>
+      <div class="q js-q">Which segments do you work in?</div>
+      <p class="hint js-hint">Select all that apply.</p>
+    </div>
+    <div class="card-body js-body">
+      <input type="text" class="js-hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+
+      <!-- STEP 1 — interior category -->
+      <div class="step on js-step" data-step="1">
+        <div class="opts js-opts" data-key="segments" data-multi="1">
+          <button type="button" class="opt" data-val="Residential"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-home"/></svg> Residential</button>
+          <button type="button" class="opt" data-val="Office / Workspace"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-building"/></svg> Office / Workspace</button>
+          <button type="button" class="opt" data-val="Retail"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-store"/></svg> Retail</button>
+          <button type="button" class="opt" data-val="Hospitality"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-hospitality"/></svg> Hospitality</button>
+          <button type="button" class="opt" data-val="Healthcare"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-health"/></svg> Healthcare</button>
+          <button type="button" class="opt" data-val="Education"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-education"/></svg> Education</button>
+          <button type="button" class="opt" data-val="Industrial / Warehouse"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-industrial"/></svg> Industrial</button>
+          <button type="button" class="opt opt-all" data-val="All / Full-service" data-exclusive="1"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-all"/></svg> All / Full-service</button>
+        </div>
+        <div class="errmsg js-err" data-for="segments">Please select at least one segment.</div>
+      </div>
+
+      <!-- STEP 2 — city (structured) -->
+      <div class="step js-step" data-step="2">
+        <div class="opts js-opts" data-key="city" data-multi="1">
+          <button type="button" class="opt" data-val="Delhi NCR">Delhi NCR</button>
+          <button type="button" class="opt" data-val="Mumbai">Mumbai</button>
+          <button type="button" class="opt" data-val="Bengaluru">Bengaluru</button>
+          <button type="button" class="opt" data-val="Pune">Pune</button>
+          <button type="button" class="opt" data-val="Hyderabad">Hyderabad</button>
+          <button type="button" class="opt" data-val="Chennai">Chennai</button>
+          <button type="button" class="opt" data-val="Kolkata">Kolkata</button>
+          <button type="button" class="opt" data-val="Ahmedabad">Ahmedabad</button>
+          <button type="button" class="opt" data-val="Other">Other city</button>
+        </div>
+        <div class="js-othercity-wrap" style="display:none;margin-top:12px">
+          <input class="in js-field" data-name="cityother" type="text" autocomplete="address-level2" placeholder="Type your city" />
+        </div>
+        <div class="errmsg js-err" data-for="city">Please select or type your city.</div>
+      </div>
+
+      <!-- STEP 3 — urgency (real qualification axis: contact · genuineness · urgency) -->
+      <div class="step js-step" data-step="3">
+        <div class="opts single js-opts" data-key="urgency">
+          <button type="button" class="opt" data-val="Right now"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-clock"/></svg> I want clients right now</button>
+          <button type="button" class="opt" data-val="Within a month"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-clock"/></svg> Within the next month</button>
+          <button type="button" class="opt" data-val="Planning ahead"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-pin"/></svg> Just planning ahead</button>
+        </div>
+        <div class="errmsg js-err" data-for="urgency">Please pick a timing.</div>
+      </div>
+
+      <!-- STEP 4 — contact (FINAL step → submits here, so a typed phone is never lost) -->
+      <div class="step js-step" data-step="4">
+        <div class="field">
+          <label class="lab">Business name</label>
+          <input class="in js-field" data-name="biz" type="text" autocomplete="organization" placeholder="Your company / brand" />
+          <div class="errmsg js-err" data-for="biz">Please enter your business name.</div>
+        </div>
+        <div class="field">
+          <label class="lab">Your name</label>
+          <input class="in js-field" data-name="name" type="text" autocomplete="name" placeholder="Full name" />
+          <div class="errmsg js-err" data-for="name">Enter your name.</div>
+        </div>
+        <div class="field">
+          <label class="lab">Mobile number</label>
+          <div class="phone-row">
+            <div class="cc">+91</div>
+            <input class="in js-field" data-name="phone" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="10-digit mobile" />
+          </div>
+          <div class="errmsg js-err" data-for="phone">Enter a valid 10-digit mobile number.</div>
+        </div>
+        <div class="field">
+          <label class="lab">Your role <span class="opt-tag">(optional)</span></label>
+          <select class="in js-field" data-name="role">
+            <option value="">Select…</option>
+            <option>Owner / Founder</option>
+            <option>Director / Partner</option>
+            <option>Sales / Marketing Head</option>
+            <option>Manager / Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="lab">Website or Instagram <span class="opt-tag">(optional)</span></label>
+          <input class="in js-field" data-name="site" type="text" placeholder="link or @handle" />
+        </div>
+        <label class="consent">
+          <input type="checkbox" class="js-field" data-name="consent" />
+          <span>I agree to be contacted about my enquiry and accept the <a href="#" class="js-doc" data-doc="privacy">Privacy Policy</a> &amp; <a href="#" class="js-doc" data-doc="terms">Terms</a>.</span>
+        </label>
+        <div class="errmsg js-err" data-for="consent">Please tick the box so our team can reach you.</div>
+      </div>
+
+    </div>
+
+    <div class="card-foot js-foot">
+      <div class="nav">
+        <button class="btn ghost back js-back" type="button" aria-label="Go back" style="display:none">‹</button>
+        <button class="btn primary js-next" type="button">Continue</button>
+      </div>
+      <div class="secure-line"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-lock"/></svg> <b>Private &amp; secure</b> · Govt-registered</div>
+    </div>
+
+    <div class="thanks js-thanks">
+      <div class="tick"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#085041" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h2 class="js-thanksName">Thank you.</h2>
+      <p>We've got your details. Our team will review your business and reach out to show how <b>exclusive, verified enquiries</b> — and your founding 25% — can work for you.</p>
+      <div class="next">
+        <div class="r"><span class="n">1</span><span>A quick call to understand your business and the clients you want.</span></div>
+        <div class="r"><span class="n">2</span><span>A live walkthrough of how the qualification system works for your category.</span></div>
+        <div class="r"><span class="n">3</span><span>If it's a fit, you start receiving verified enquiries matched to you alone.</span></div>
+      </div>
+      <div class="wa-block">
+        <p class="wa-lead">Prefer not to wait? Message us directly.</p>
+        <a class="wa-btn js-wa" href="#" target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="#063d23"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-5.6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.2 7.2 0 0 1-1.3-1.7c-.1-.2 0-.3.1-.4l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.4 10.3 10.3 0 0 0 3.9 3.4c1.9.7 1.9.5 2.3.5.4 0 1.3-.5 1.5-1.1.2-.5.2-1 .1-1.1Z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <p class="wa-timer-wrap"><span class="js-timerlabel">Typical reply within</span> <b class="wa-timer js-timer">10:00</b></p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+(function(){
+  "use strict";
+  var ENDPOINT="https://formspree.io/f/xwvjvrjr";
+  var tpl=document.getElementById("funnelTpl");
+
+  /* Vendor-agnostic event spine. Every event lands in window.dataLayer (ready
+     for GTM/GA4) and mirrors to gtag if configured. Safe no-op without IDs. */
+  function track(name, params){
+    try{ window.dataLayer=window.dataLayer||[]; var p={event:name}; if(params){for(var k in params){if(params.hasOwnProperty(k))p[k]=params[k];}} window.dataLayer.push(p); }catch(e){}
+    try{ if(typeof window.gtag==="function") window.gtag("event", name, params||{}); }catch(e){}
+  }
+
+  function mountFunnel(root){
+    var q=function(s){return root.querySelector(s);};
+    var qa=function(s){return root.querySelectorAll(s);};
+    var data={segments:[],city:[],cityOtherText:"",urgency:"",role:"",bizName:"",name:"",phone:"",site:"",consent:false};
+    var mountTime=Date.now();
+    var step=1,MAX=4,timer=null,started=false;
+    var titles={
+      1:["Which segments do you work in?","Select all that apply."],
+      2:["Which cities do you work in?","Select all that apply — we match enquiries by city."],
+      3:["How soon do you want verified enquiries?","Just so we set the right pace for you."],
+      4:["Last step — where do we send them?","We'll only use these to set up your account and call you. No spam."]
+    };
+    var steps=qa(".js-step"), bars=qa(".js-prog i");
+
+    function markStart(){ if(started)return; started=true; track("ib_form_start"); }
+
+    function paint(){
+      [].forEach.call(steps,function(s){s.classList.toggle("on",+s.getAttribute("data-step")===step);});
+      [].forEach.call(bars,function(b,i){b.classList.toggle("done",i<step-1);b.classList.toggle("active",i===step-1);});
+      q(".js-stepLabel").textContent="Step "+step+" of "+MAX;
+      q(".js-q").textContent=titles[step][0];
+      q(".js-hint").textContent=titles[step][1];
+      q(".js-back").style.display=step>1?"block":"none";
+      q(".js-next").textContent=step===MAX?"Request a callback":"Continue";
+    }
+    [].forEach.call(qa(".js-opts"),function(c){
+      var key=c.getAttribute("data-key");
+      var multi=c.getAttribute("data-multi")==="1";
+      var noadv=c.getAttribute("data-noadvance")==="1";
+      c.addEventListener("click",function(e){
+        var b=e.target.closest(".opt"); if(!b)return;
+        markStart();
+        var val=b.getAttribute("data-val");
+        if(multi){
+          if(b.getAttribute("data-exclusive")==="1"){
+            var was=b.classList.contains("sel");
+            [].forEach.call(c.querySelectorAll(".opt"),function(o){o.classList.remove("sel");});
+            if(!was)b.classList.add("sel");
+          }else{
+            var ex=c.querySelector('.opt[data-exclusive="1"]'); if(ex)ex.classList.remove("sel");
+            b.classList.toggle("sel");
+          }
+          data[key]=[].map.call(c.querySelectorAll(".opt.sel"),function(o){return o.getAttribute("data-val");});
+          var em=q('.js-err[data-for="'+key+'"]'); if(em)em.classList.remove("show");
+          if(key==="city"){
+            var ow=q(".js-othercity-wrap"); var hasOther=data.city.indexOf("Other")>-1;
+            if(ow){ow.style.display=hasOther?"block":"none"; if(hasOther){var oi=ow.querySelector("input"); if(oi){setTimeout(function(){oi.focus();},60);}}}
+          }
+          return;
+        }
+        [].forEach.call(c.querySelectorAll(".opt"),function(o){o.classList.remove("sel");});
+        b.classList.add("sel");
+        data[key]=val;
+        if(noadv){
+          var em2=q('.js-err[data-for="'+key+'"]'); if(em2)em2.classList.remove("show");
+          return;
+        }
+        setTimeout(next,180);
+      });
+    });
+    function field(n){return q('[data-name="'+n+'"]');}
+    function cityStr(){return (data.city||[]).map(function(c){return c==="Other"?(data.cityOtherText||"Other"):c;}).join(", ");}
+    function setErr(n,on){var e=q('.js-err[data-for="'+n+'"]'); if(e)e.classList.toggle("show",!!on);}
+    function clearErr(){[].forEach.call(qa(".js-err"),function(e){e.classList.remove("show");});[].forEach.call(qa(".in"),function(e){e.classList.remove("bad");});}
+    function validate(){
+      clearErr();
+      if(step===1){if(data.segments.length)return true;setErr("segments",1);return false;}
+      if(step===2){
+        var cities=data.city||[];
+        if(!cities.length){setErr("city",1);return false;}
+        if(cities.indexOf("Other")>-1){
+          data.cityOtherText=field("cityother").value.trim();
+          if(!data.cityOtherText){setErr("city",1);field("cityother").classList.add("bad");return false;}
+        }
+        return true;
+      }
+      if(step===3){ if(data.urgency)return true; setErr("urgency",1); return false; }
+      if(step===4){
+        var ok=true;
+        data.bizName=field("biz").value.trim();
+        data.name=field("name").value.trim();
+        data.phone=field("phone").value.replace(/\D/g,"");
+        var siteEl=field("site"); data.site=siteEl?siteEl.value.trim():"";
+        var roleEl=field("role"); data.role=roleEl?roleEl.value:"";
+        data.consent=field("consent").checked;
+        if(!data.bizName){setErr("biz",1);field("biz").classList.add("bad");ok=false;}
+        if(!data.name){setErr("name",1);field("name").classList.add("bad");ok=false;}
+        if(!/^[6-9]\d{9}$/.test(data.phone)){setErr("phone",1);field("phone").classList.add("bad");ok=false;}
+        if(!data.consent){setErr("consent",1);ok=false;}
+        return ok;
+      }
+      return true;
+    }
+    function scrollTop(){
+      var body=q(".js-body"); if(body)body.scrollTop=0;
+      if(window.innerWidth>760)return;
+      if(root.closest&&root.closest(".modal-overlay"))return;
+      var h=q(".js-head"); if(h&&h.scrollIntoView)h.scrollIntoView({behavior:"smooth",block:"start"});
+    }
+    function next(){ if(!validate())return; if(step<MAX){step++;paint();track("ib_step_view",{step:step});scrollTop();} else submit(); }
+    function back(){ if(step>1){step--;paint();track("ib_step_back",{step:step});scrollTop();} }
+    q(".js-next").addEventListener("click",next);
+    q(".js-back").addEventListener("click",back);
+    var ph=field("phone"); if(ph)ph.addEventListener("input",function(){markStart();this.value=this.value.replace(/\D/g,"").slice(0,10);});
+    [].forEach.call(qa(".js-field"),function(f){ f.addEventListener("focus",markStart); });
+
+    function submit(){
+      var btn=q(".js-next"); btn.disabled=true; btn.textContent="Sending…";
+      var hp=q(".js-hp"); var hpVal=hp?hp.value:"";
+      var elapsed=Math.round((Date.now()-mountTime)/1000);
+      var suspectBot=(hpVal!=="")||(elapsed<3);
+      var payload={
+        business_name:data.bizName,
+        contact_name:data.name,
+        phone:"+91"+data.phone,
+        segments:(data.segments&&data.segments.length)?data.segments.join(", "):"",
+        city:cityStr(),
+        urgency:data.urgency,
+        role:data.role,
+        website:data.site,
+        consent:data.consent?"Yes":"No",
+        source_url:location.href,
+        ad_source:(location.search||""),
+        time_on_form_seconds:elapsed,
+        suspected_bot:suspectBot?"yes":"no",
+        _gotcha:hpVal,
+        submitted_at:new Date().toISOString(),
+        _subject:"New Interior bazzar enquiry — "+(data.bizName||"website")
+      };
+      // Send to Formspree behind the scenes, then reveal the thank-you + WhatsApp.
+      fetch(ENDPOINT,{
+        method:"POST",
+        headers:{"Accept":"application/json","Content-Type":"application/json"},
+        body:JSON.stringify(payload)
+      })
+      .then(function(){
+        if(!suspectBot){
+          /* GTM listens for 'ib_lead_submit' — map it to GA4 generate_lead + a
+             Google Ads conversion tag inside the container. Params below are
+             surfaced as dataLayer variables for reporting / value-based bidding. */
+          track("ib_lead_submit",{
+            conversion:true,
+            currency:"INR",
+            value:0,                       /* set a per-enquiry value in GTM if you bid on value */
+            lead_segments:payload.segments,
+            lead_city:payload.city,
+            lead_urgency:payload.urgency,
+            lead_role:payload.role||"",
+            form_seconds:elapsed
+          });
+          try{if(window.fbq)fbq('track','Lead');}catch(e){}
+          try{if(window.gtag)gtag('event','generate_lead',{currency:"INR",value:0});}catch(e){}
+        }
+      })
+      .catch(function(){})
+      .then(function(){ showThanks(); });
+    }
+    function showThanks(){
+      q(".js-head").style.display="none";
+      q(".js-body").style.display="none";
+      var f=q(".js-foot"); if(f)f.style.display="none";
+      var t=q(".js-thanks"); t.classList.add("on");
+      var first=data.name?data.name.split(" ")[0]:"";
+      q(".js-thanksName").textContent=first?("Thank you, "+first+"."):"Thank you.";
+      var msg="Hi Interior bazzar, I'd like to know more about exclusive verified enquiries.\n"
+            +"Business: "+(data.bizName||"-")+"\n"
+            +"Segments: "+((data.segments&&data.segments.length)?data.segments.join(", "):"-")+"\n"
+            +"City: "+(cityStr()||"-")+"\n"
+            +"Name: "+(data.name||"-")+"\n"
+            +"Timing: "+(data.urgency||"-");
+      var wa=q(".js-wa"); if(wa)wa.href="https://wa.me/918920898168?text="+encodeURIComponent(msg);
+      startTimer();
+      if(t.scrollIntoView)t.scrollIntoView({behavior:"smooth",block:"center"});
+    }
+    function startTimer(){
+      var el=q(".js-timer"); if(!el)return;
+      var total=600;
+      if(timer)clearInterval(timer);
+      function tick(){
+        var m=Math.floor(total/60),s=total%60;
+        el.textContent=(m<10?"0":"")+m+":"+(s<10?"0":"")+s;
+        if(total<=0){clearInterval(timer);var lab=q(".js-timerlabel");if(lab)lab.textContent="We'll reply as soon as we can —";return;}
+        total--;
+      }
+      tick(); timer=setInterval(tick,1000);
+    }
+    paint();
+    return {stop:function(){if(timer)clearInterval(timer);}};
+  }
+
+  function mountInto(container){
+    if(!container)return null;
+    container.innerHTML="";
+    var node=tpl.content.firstElementChild.cloneNode(true);
+    container.appendChild(node);
+    return mountFunnel(node);
+  }
+
+  mountInto(document.getElementById("heroFormSlot"));
+  mountInto(document.getElementById("closingFormSlot"));
+
+  var modal=document.getElementById("modal");
+  var modalBody=document.getElementById("modalBody");
+  var inst=null;
+  function openModal(){ inst=mountInto(modalBody); modal.classList.add("on"); document.body.classList.add("no-scroll"); track("ib_modal_open"); }
+  function closeModal(){ modal.classList.remove("on"); document.body.classList.remove("no-scroll"); if(inst&&inst.stop)inst.stop(); }
+  modal.addEventListener("click",function(e){ if(e.target===modal||e.target.classList.contains("js-mclose"))closeModal(); });
+  document.addEventListener("keydown",function(e){
+    if(e.key!=="Escape")return;
+    if(docModal&&docModal.classList.contains("on")){closeDoc();return;}
+    if(modal.classList.contains("on"))closeModal();
+  });
+  [].forEach.call(document.querySelectorAll(".js-openmodal"),function(b){ b.addEventListener("click",function(e){e.preventDefault();openModal();}); });
+
+  // ---- Privacy / Terms in-page modal ----
+  var docModal=document.getElementById("docModal");
+  function openDoc(which){
+    var pp=document.getElementById("docPrivacy"),tt=document.getElementById("docTerms");
+    if(pp)pp.classList.toggle("on",which==="privacy");
+    if(tt)tt.classList.toggle("on",which==="terms");
+    docModal.classList.add("on"); document.body.classList.add("no-scroll");
+  }
+  function closeDoc(){ docModal.classList.remove("on"); if(!modal.classList.contains("on"))document.body.classList.remove("no-scroll"); }
+  document.addEventListener("click",function(e){
+    var d=e.target.closest&&e.target.closest(".js-doc");
+    if(d){ e.preventDefault(); openDoc(d.getAttribute("data-doc")); return; }
+    if(e.target===docModal||e.target.classList.contains("js-docclose")) closeDoc();
+  });
+
+  var sticky=document.getElementById("stickyCta");
+  var closing=document.getElementById("closing");
+  function onScroll(){
+    var past=window.scrollY>560;
+    var cr=closing.getBoundingClientRect();
+    var closingVisible=cr.top < (window.innerHeight-80);
+    sticky.classList.toggle("show", past && !closingVisible);
+  }
+  window.addEventListener("scroll",onScroll,{passive:true});
+  window.addEventListener("resize",onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
