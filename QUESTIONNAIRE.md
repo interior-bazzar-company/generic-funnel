@@ -1,6 +1,6 @@
 # Sales funnel questionnaire — proposed
 
-Audience: interior / sanitary business owners in India, arriving cold from a Meta or Google ad.
+Audience: interior business owners in India, arriving cold from a Meta or Google ad.
 Goal of the form: qualify them (can they pay, do they need us, how urgent), and get a phone number.
 
 ## The rules this follows
