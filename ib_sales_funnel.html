@@ -5,6 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Interior bazzar — Verified interior clients, matched to you alone</title>
 <meta name="description" content="Each verified, ready-to-talk interior enquiry goes to one business only — never broadcast to your competitors. For interior businesses. Govt-registered, MSME-certified." />
+<link rel="canonical" href="https://salesprospect.interiorbazzar.com/" />
+
+<!-- Link previews. This page is shared into WhatsApp groups by the sales team, so a
+     missing preview image reads as an untrustworthy link — the one thing we can't afford. -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Interior bazzar" />
+<meta property="og:url" content="https://salesprospect.interiorbazzar.com/" />
+<meta property="og:title" content="Verified interior clients — matched to you alone" />
+<meta property="og:description" content="Directories sell one enquiry to eight of your rivals. We route each verified, ready-to-talk client to a single business. Founding spots open — 25% off all Signature plans." />
+<meta property="og:image" content="https://salesprospect.interiorbazzar.com/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_IN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Verified interior clients — matched to you alone" />
+<meta name="twitter:description" content="One verified client, one business — never your competitors. Founding spots open." />
+<meta name="twitter:image" content="https://salesprospect.interiorbazzar.com/og-image.jpg" />
+<meta name="theme-color" content="#085041" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
@@ -211,6 +230,12 @@ section.band{padding:54px 0}
 .step-label{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
 .q{color:var(--forest);font-size:21px;line-height:1.15;margin:6px 0 2px;font-family:"DM Serif Display",serif;font-style:italic}
 .hint{font-size:13.5px;color:var(--muted);margin:0}
+/* highlighted offer row under the step title — visible on every step */
+.plan-offer{display:flex;align-items:center;gap:8px;margin:11px 0 0;background:rgba(186,117,23,.13);border:1px solid rgba(186,117,23,.36);border-radius:9px;padding:8px 12px;font-size:13px;font-weight:600;color:#6b4410;line-height:1.3}
+.plan-offer svg{width:15px;height:15px;flex:none;stroke:var(--amber);fill:none;stroke-width:1.9}
+.plan-offer strong{color:#9a610f;font-weight:800}
+.plan-offer b{color:#9a610f;font-weight:700;white-space:nowrap}
+@media(max-width:760px){.plan-offer{font-size:14px}}
 .card-body{padding:16px 22px 18px;flex:1 1 auto;min-height:0}
 .card-foot{flex:none;padding:14px 22px 18px;border-top:1px solid var(--line);background:var(--bone-card)}
 .secure-line{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:11px;font-size:12px;color:var(--muted);text-align:center}
@@ -266,6 +291,12 @@ select.in{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xml
 .wa-btn:hover{filter:brightness(.97);transform:translateY(-1px)}
 .wa-timer-wrap{font-size:12.5px;color:var(--muted);margin:13px 0 0;text-align:center}
 .wa-timer{font-variant-numeric:tabular-nums;color:var(--forest);font-weight:700}
+
+/* submit failed — details are held locally, offer WhatsApp + retry */
+.fail-note{display:none;max-width:360px;margin:18px auto 0;background:#fdf3f2;border:1px solid rgba(179,38,30,.3);border-radius:12px;padding:14px 16px;text-align:left}
+.fail-note.on{display:block}
+.fail-note p{margin:0 0 10px;font-size:13.5px;color:#7a2a24;line-height:1.5}
+.fail-note .btn{width:100%;font-size:14.5px;padding:11px 16px}
 
 /* ---------- sticky CTA ---------- */
 .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:900;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -18px rgba(8,80,65,.4);transform:translateY(120%);transition:transform .35s cubic-bezier(.4,0,.2,1);padding:12px 0;padding-bottom:max(12px,env(safe-area-inset-bottom))}
@@ -352,6 +383,37 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
 }
 </style>
 
+<!-- Structured data: the FAQ block below is already on the page, this just makes it
+     machine-readable so it can win rich results on the brand + competitor searches. -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "name":"Interior bazzar",
+      "url":"https://www.interiorbazzar.com",
+      "email":"help@interiorbazzar.com",
+      "telephone":"+91-88823-14255",
+      "description":"A dedicated interior and sanitary platform that connects businesses with verified clients, matched one-to-one and never broadcast.",
+      "parentOrganization":{"@type":"Organization","name":"Feelsafe Technology India Private Limited","identifier":"U62090DL2024PTC434514"},
+      "areaServed":"IN"
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Is each enquiry really exclusive to me?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every enquiry is routed to one business only — never shared or resold to your competitors. That exclusivity is the heart of how we work, and the main thing that sets us apart from directories like Justdial or IndiaMART."}},
+        {"@type":"Question","name":"How do you verify an enquiry before sending it?","acceptedAnswer":{"@type":"Answer","text":"Each one passes a multi-level check — genuine interest, real intent and urgency — and is then confirmed by a direct call from our team. By the time it reaches you, it's a real person ready to talk."}},
+        {"@type":"Question","name":"How is this different from Justdial or IndiaMART?","acceptedAnswer":{"@type":"Answer","text":"They sell the same enquiry to many businesses at once, so you compete on price the moment you call. We do the opposite: one verified enquiry, one business — plus a profile and portfolio to build your brand, not just a stream of contacts."}},
+        {"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"It's an annual subscription, priced to how deeply you want enquiries qualified. Founding members lock 25% off all Signature plans, with EMI available. We share the exact numbers on a short call once we understand your business."}},
+        {"@type":"Question","name":"Can I pay in installments?","acceptedAnswer":{"@type":"Answer","text":"Yes. We offer flexible payment, including EMI and installment options, so you can spread the cost rather than pay it all upfront."}},
+        {"@type":"Question","name":"How soon will I start receiving enquiries?","acceptedAnswer":{"@type":"Answer","text":"Once your profile is set up and verified, enquiries are matched and routed as they come in. Volume depends on demand in your category and city."}}
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- ============ ANALYTICS (live — from production salesprospect.interiorbazzar.com) ============
      This page fires structured events for EVERY funnel step into window.dataLayer:
      ib_form_start, ib_step_view (with {step}), ib_step_back, ib_modal_open and ib_lead_submit.
@@ -429,7 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <button type="button" class="promobar js-openmodal">
   <span class="pb-dot" aria-hidden="true"></span>
   One verified client goes to <strong>one business — never your competitors.</strong>
-  <span class="pb-cta">Founding spots open · 25% off →</span>
+  <span class="pb-cta">Founding spots open · 25% off Signature plans →</span>
 </button>
 
 <!-- ============ TOP BAR ============ -->
@@ -451,8 +513,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h1>The next client is verified, ready, and <span class="u">yours alone</span>.</h1>
       <p class="sub">Directories sell one enquiry to everyone, then leave you to fight on price. We route each verified enquiry to a single business — and in your area, that business is you.</p>
       <div class="hero-pills">
-        <span class="hero-offer"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tag"/></svg> <b>Founding offer</b> — 25% off all plans</span>
-        <span class="hero-offer alt"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg> <b>One spot per area</b> · EMI available</span>
+        <span class="hero-offer"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tag"/></svg> <b>Founding offer</b> — 25% off all Signature plans</span>
+        <span class="hero-offer alt"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg> <b>One spot per area</b></span>
       </div>
       <button type="button" class="btn offer hero-mcta js-openmodal">See if my area is still open →</button>
       <ul class="points">
@@ -623,7 +685,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <details class="fq" open><summary>Is each enquiry really exclusive to me?</summary><p>Yes. Every enquiry is routed to one business only — never shared or resold to your competitors. That exclusivity is the heart of how we work, and the main thing that sets us apart from directories like Justdial or IndiaMART.</p></details>
       <details class="fq"><summary>How do you verify an enquiry before sending it?</summary><p>Each one passes a multi-level check — genuine interest, real intent and urgency — and is then confirmed by a direct call from our team. By the time it reaches you, it's a real person ready to talk.</p></details>
       <details class="fq"><summary>How is this different from Justdial or IndiaMART?</summary><p>They sell the same enquiry to many businesses at once, so you compete on price the moment you call. We do the opposite: one verified enquiry, one business — plus a profile and portfolio to build your brand, not just a stream of contacts.</p></details>
-      <details class="fq"><summary>What does it cost?</summary><p>It's an annual subscription, priced to how deeply you want enquiries qualified. Founding members lock 25% off every plan. We share the exact numbers on a short call once we understand your business — so you only pay for what fits, with no surprises and no obligation.</p></details>
+      <details class="fq"><summary>What does it cost?</summary><p>It's an annual subscription, priced to how deeply you want enquiries qualified. Founding members lock 25% off all Signature plans, with EMI available. We share the exact numbers on a short call once we understand your business — so you only pay for what fits, with no surprises and no obligation.</p></details>
       <details class="fq"><summary>Can I pay in installments?</summary><p>Yes. We offer flexible payment, including EMI and installment options, so you can spread the cost rather than pay it all upfront. We'll walk you through the plan that fits your business on your call.</p></details>
       <details class="fq"><summary>How soon will I start receiving enquiries?</summary><p>Once your profile is set up and verified, enquiries are matched and routed as they come in. Volume depends on demand in your category and city, which we'll walk you through honestly on the call.</p></details>
     </div>
@@ -665,7 +727,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============ STICKY CTA ============ -->
 <div class="sticky-cta" id="stickyCta">
   <div class="sc-in">
-    <span class="sc-text"><b>Founding spots open</b> — one business per area, 25% off</span>
+    <span class="sc-text"><b>Founding spots open</b> — one business per area, 25% off Signature plans</span>
     <button type="button" class="btn offer js-openmodal">Check my area →</button>
   </div>
 </div>
@@ -724,29 +786,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============ FORM TEMPLATE (4 steps, interior-tuned) ============ -->
 <template id="funnelTpl">
   <div class="card">
-    <div class="offer-ribbon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tag"/></svg> <strong>25% off all plans</strong> · easy EMI</div>
+    <div class="offer-ribbon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-card"/></svg> <strong>EMI Payment Options Available</strong></div>
     <div class="card-head js-head">
-      <div class="prog js-prog" aria-hidden="true"><i class="active"></i><i></i><i></i><i></i></div>
-      <div class="step-label js-stepLabel">Step 1 of 4</div>
-      <div class="q js-q">Which segments do you work in?</div>
+      <div class="prog js-prog" aria-hidden="true"><i class="active"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="step-label js-stepLabel">Step 1 of 7</div>
+      <div class="q js-q">What kind of work do you do?</div>
       <p class="hint js-hint">Select all that apply.</p>
+      <div class="plan-offer"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tag"/></svg> <span><strong>25% off</strong> all Signature plans — <b>offer closes 31 July</b></span></div>
     </div>
     <div class="card-body js-body">
       <input type="text" class="js-hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
 
-      <!-- STEP 1 — interior category -->
+      <!-- STEP 1 — what work they do (easiest opener: it's about them, no wrong answer) -->
       <div class="step on js-step" data-step="1">
         <div class="opts js-opts" data-key="segments" data-multi="1">
-          <button type="button" class="opt" data-val="Residential"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-home"/></svg> Residential</button>
-          <button type="button" class="opt" data-val="Office / Workspace"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-building"/></svg> Office / Workspace</button>
-          <button type="button" class="opt" data-val="Retail"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-store"/></svg> Retail</button>
-          <button type="button" class="opt" data-val="Hospitality"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-hospitality"/></svg> Hospitality</button>
-          <button type="button" class="opt" data-val="Healthcare"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-health"/></svg> Healthcare</button>
-          <button type="button" class="opt" data-val="Education"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-education"/></svg> Education</button>
-          <button type="button" class="opt" data-val="Industrial / Warehouse"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-industrial"/></svg> Industrial</button>
-          <button type="button" class="opt opt-all" data-val="All / Full-service" data-exclusive="1"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-all"/></svg> All / Full-service</button>
+          <button type="button" class="opt" data-val="Residential"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-home"/></svg> Residential homes</button>
+          <button type="button" class="opt" data-val="Office / Workspace"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-building"/></svg> Offices / workspaces</button>
+          <button type="button" class="opt" data-val="Retail"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-store"/></svg> Shops / showrooms</button>
+          <button type="button" class="opt" data-val="Hospitality"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-hospitality"/></svg> Hotels &amp; restaurants</button>
+          <button type="button" class="opt" data-val="Healthcare"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-health"/></svg> Hospitals / clinics</button>
+          <button type="button" class="opt" data-val="Education"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-education"/></svg> Schools / colleges</button>
+          <button type="button" class="opt" data-val="Industrial / Warehouse"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-industrial"/></svg> Factories / warehouses</button>
+          <button type="button" class="opt opt-all" data-val="All / Full-service" data-exclusive="1"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-all"/></svg> We do everything</button>
         </div>
-        <div class="errmsg js-err" data-for="segments">Please select at least one segment.</div>
+        <div class="errmsg js-err" data-for="segments">Please select at least one.</div>
       </div>
 
       <!-- STEP 2 — city (structured) -->
@@ -768,18 +831,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="errmsg js-err" data-for="city">Please select or type your city.</div>
       </div>
 
-      <!-- STEP 3 — urgency (real qualification axis: contact · genuineness · urgency) -->
+      <!-- STEP 3 — where clients come from today (tells sales which competitor we displace) -->
       <div class="step js-step" data-step="3">
-        <div class="opts single js-opts" data-key="urgency">
-          <button type="button" class="opt" data-val="Right now"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-clock"/></svg> I want clients right now</button>
-          <button type="button" class="opt" data-val="Within a month"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-clock"/></svg> Within the next month</button>
-          <button type="button" class="opt" data-val="Planning ahead"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-pin"/></svg> Just planning ahead</button>
+        <div class="opts single js-opts" data-key="leadsource">
+          <button type="button" class="opt" data-val="Justdial / IndiaMART"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-store"/></svg> Justdial, IndiaMART or similar</button>
+          <button type="button" class="opt" data-val="Facebook / Instagram ads"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-users"/></svg> Facebook / Instagram ads</button>
+          <button type="button" class="opt" data-val="Google ads"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-chart"/></svg> Google ads</button>
+          <button type="button" class="opt" data-val="Agency"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-briefcase"/></svg> An agency runs it for me</button>
+          <button type="button" class="opt" data-val="Referrals"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-user"/></svg> Word of mouth and referrals</button>
+          <button type="button" class="opt" data-val="Walk-ins"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-pin"/></svg> Walk-ins and my own contacts</button>
         </div>
-        <div class="errmsg js-err" data-for="urgency">Please pick a timing.</div>
+        <div class="errmsg js-err" data-for="leadsource">Please pick one.</div>
       </div>
 
-      <!-- STEP 4 — contact (FINAL step → submits here, so a typed phone is never lost) -->
+      <!-- STEP 4 — the pain, in their words (this is the sentence sales repeats back on the call) -->
       <div class="step js-step" data-step="4">
+        <div class="opts single js-opts" data-key="challenge">
+          <button type="button" class="opt" data-val="Shared with competitors"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-users"/></svg> The same lead goes to my competitors too</button>
+          <button type="button" class="opt" data-val="Not serious"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-user"/></svg> Most of them are not serious</button>
+          <button type="button" class="opt" data-val="Don't respond"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-phone-check"/></svg> They don't pick up the phone</button>
+          <button type="button" class="opt" data-val="Price war"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-chart"/></svg> Everyone only asks for the lowest price</button>
+          <button type="button" class="opt" data-val="Not enough leads"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-inbox"/></svg> I'm just not getting enough leads</button>
+          <button type="button" class="opt" data-val="Costs too much"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-briefcase"/></svg> It costs too much for what I get</button>
+        </div>
+        <div class="errmsg js-err" data-for="challenge">Please pick one.</div>
+      </div>
+
+      <!-- STEP 5 — capacity: sizes the account without asking about money yet -->
+      <div class="step js-step" data-step="5">
+        <div class="opts single js-opts" data-key="capacity">
+          <button type="button" class="opt" data-val="1–2"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-home"/></svg> 1 – 2 projects</button>
+          <button type="button" class="opt" data-val="3–5"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-building"/></svg> 3 – 5 projects</button>
+          <button type="button" class="opt" data-val="6–10"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-briefcase"/></svg> 6 – 10 projects</button>
+          <button type="button" class="opt" data-val="10+"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-chart"/></svg> More than 10</button>
+          <button type="button" class="opt" data-val="Not sure"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-clock"/></svg> Not sure yet</button>
+        </div>
+        <div class="errmsg js-err" data-for="capacity">Please pick one.</div>
+      </div>
+
+      <!-- STEP 6 — money, asked last: five micro-commitments deep, quitting now feels wasteful -->
+      <div class="step js-step" data-step="6">
+        <div class="opts single js-opts" data-key="budget">
+          <button type="button" class="opt" data-val="Nothing yet"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-users"/></svg> Nothing yet — clients come from referrals</button>
+          <button type="button" class="opt" data-val="Under ₹50k"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-card"/></svg> Under ₹50,000 a month</button>
+          <button type="button" class="opt" data-val="₹50k–1L"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-card"/></svg> ₹50,000 – ₹1 lakh</button>
+          <button type="button" class="opt" data-val="₹1–2L"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-card"/></svg> ₹1 – ₹2 lakh</button>
+          <button type="button" class="opt" data-val="₹2–2.5L"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-card"/></svg> ₹2 – ₹2.5 lakh</button>
+          <button type="button" class="opt" data-val="₹2.5L+"><svg class="oic" viewBox="0 0 24 24"><use href="#ic-card"/></svg> More than ₹2.5 lakh</button>
+        </div>
+        <div class="errmsg js-err" data-for="budget">Please pick a range.</div>
+      </div>
+
+      <!-- STEP 7 — contact (FINAL step → submits here, so a typed phone is never lost) -->
+      <div class="step js-step" data-step="7">
         <div class="field">
           <label class="lab">Business name</label>
           <input class="in js-field" data-name="biz" type="text" autocomplete="organization" placeholder="Your company / brand" />
@@ -809,8 +913,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </select>
         </div>
         <div class="field">
-          <label class="lab">Website or Instagram <span class="opt-tag">(optional)</span></label>
-          <input class="in js-field" data-name="site" type="text" placeholder="link or @handle" />
+          <label class="lab">Best time to call you</label>
+          <select class="in js-field" data-name="calltime">
+            <option value="Anytime">Anytime</option>
+            <option>Morning (9 AM – 12 PM)</option>
+            <option>Afternoon (12 PM – 4 PM)</option>
+            <option>Evening (4 PM – 8 PM)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="lab">Where did you hear about us? <span class="opt-tag">(optional)</span></label>
+          <select class="in js-field" data-name="howheard">
+            <option value="">Select…</option>
+            <option>Facebook / Instagram</option>
+            <option>Google search</option>
+            <option>A friend told me</option>
+            <option>WhatsApp</option>
+            <option>YouTube</option>
+            <option>Newspaper or news article</option>
+            <option>Somewhere else</option>
+          </select>
         </div>
         <label class="consent">
           <input type="checkbox" class="js-field" data-name="consent" />
@@ -830,21 +952,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="thanks js-thanks">
-      <div class="tick"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#085041" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="tick js-tick"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#085041" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <h2 class="js-thanksName">Thank you.</h2>
-      <p>We've got your details. Our team will review your business and reach out to show how <b>exclusive, verified enquiries</b> — and your founding 25% — can work for you.</p>
-      <div class="next">
+      <p class="js-thanksLead">We've got your details. Our team will review your business and reach out to show how <b>exclusive, verified enquiries</b> — and your founding 25% off Signature plans — can work for you.</p>
+      <div class="next js-nextsteps">
         <div class="r"><span class="n">1</span><span>A quick call to understand your business and the clients you want.</span></div>
         <div class="r"><span class="n">2</span><span>A live walkthrough of how the qualification system works for your category.</span></div>
         <div class="r"><span class="n">3</span><span>If it's a fit, you start receiving verified enquiries matched to you alone.</span></div>
       </div>
+      <div class="fail-note js-failnote">
+        <p>Your answers are saved on this device — nothing is lost. Send them to us on WhatsApp below, or try again.</p>
+        <button type="button" class="btn ghost js-retry">Try sending again</button>
+      </div>
       <div class="wa-block">
-        <p class="wa-lead">Prefer not to wait? Message us directly.</p>
+        <p class="wa-lead js-walead">Prefer not to wait? Message us directly.</p>
         <a class="wa-btn js-wa" href="#" target="_blank" rel="noopener">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="#063d23"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-5.6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.2 7.2 0 0 1-1.3-1.7c-.1-.2 0-.3.1-.4l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.4 10.3 10.3 0 0 0 3.9 3.4c1.9.7 1.9.5 2.3.5.4 0 1.3-.5 1.5-1.1.2-.5.2-1 .1-1.1Z"/></svg>
           Chat on WhatsApp
         </a>
-        <p class="wa-timer-wrap"><span class="js-timerlabel">Typical reply within</span> <b class="wa-timer js-timer">10:00</b></p>
+        <p class="wa-timer-wrap js-timerwrap"><span class="js-timerlabel">Typical reply within</span> <b class="wa-timer js-timer">10:00</b></p>
       </div>
     </div>
   </div>
@@ -856,6 +982,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var ENDPOINT="https://formspree.io/f/xwvjvrjr";
   var tpl=document.getElementById("funnelTpl");
 
+  /* Partial answers survive a bounce, a reload, or a failed submit. Held on the
+     visitor's device only (never sent until they submit), and dropped once the
+     lead lands or after 7 days. */
+  /* v2: question set changed (leadsource + capacity added, urgency + site dropped).
+     A new key drops stale v1 sessions rather than restoring them into a form that
+     no longer has those steps. */
+  var LS_KEY="ib_funnel_state_v2";
+  var LS_TTL=7*24*60*60*1000;
+  function loadState(){
+    try{
+      var raw=localStorage.getItem(LS_KEY); if(!raw)return null;
+      var o=JSON.parse(raw);
+      if(!o||!o.data||!o.ts||(Date.now()-o.ts)>LS_TTL){localStorage.removeItem(LS_KEY);return null;}
+      return o;
+    }catch(e){return null;}
+  }
+  function saveState(data,step){
+    try{ localStorage.setItem(LS_KEY,JSON.stringify({ts:Date.now(),step:step,data:data})); }catch(e){}
+  }
+  function clearState(){ try{ localStorage.removeItem(LS_KEY); }catch(e){} }
+
   /* Vendor-agnostic event spine. Every event lands in window.dataLayer (ready
      for GTM/GA4) and mirrors to gtag if configured. Safe no-op without IDs. */
   function track(name, params){
@@ -863,21 +1010,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     try{ if(typeof window.gtag==="function") window.gtag("event", name, params||{}); }catch(e){}
   }
 
-  function mountFunnel(root){
+  function mountFunnel(root,placement){
     var q=function(s){return root.querySelector(s);};
     var qa=function(s){return root.querySelectorAll(s);};
-    var data={segments:[],city:[],cityOtherText:"",urgency:"",role:"",bizName:"",name:"",phone:"",site:"",consent:false};
+    /* Every event carries the mount it came from — hero, closing or modal — so the
+       three forms can be compared instead of collapsing into one funnel. */
+    function ev(name,params){
+      var p={funnel:placement};
+      if(params){for(var k in params){if(params.hasOwnProperty(k))p[k]=params[k];}}
+      track(name,p);
+    }
+    var data={segments:[],city:[],cityOtherText:"",leadsource:"",challenge:"",capacity:"",budget:"",role:"",bizName:"",name:"",phone:"",callTime:"Anytime",howHeard:"",consent:false};
     var mountTime=Date.now();
-    var step=1,MAX=4,timer=null,started=false;
+    var step=1,MAX=7,timer=null,started=false;
+    var saved=loadState();
+    if(saved){
+      for(var sk in data){ if(data.hasOwnProperty(sk)&&saved.data[sk]!=null) data[sk]=saved.data[sk]; }
+      step=Math.min(Math.max(saved.step||1,1),MAX);
+    }
+    function persist(){ saveState(data,step); }
     var titles={
-      1:["Which segments do you work in?","Select all that apply."],
-      2:["Which cities do you work in?","Select all that apply — we match enquiries by city."],
-      3:["How soon do you want verified enquiries?","Just so we set the right pace for you."],
-      4:["Last step — where do we send them?","We'll only use these to set up your account and call you. No spam."]
+      1:["What kind of work do you do?","Select all that apply."],
+      2:["Which city do you work in?","Select all that apply — we match clients by city."],
+      3:["How do you get most of your clients today?","Just so we know what you're already using."],
+      4:["What annoys you most about the leads you get?","So we can show you exactly how we fix it."],
+      5:["How many new projects can you take on next month?","Your best guess is fine."],
+      6:["How much do you spend every month to get new clients?","No exact figure needed — just the closest range. It helps us match you to the right plan."],
+      7:["Last step — where do we send them?","We'll only use these to set up your account and call you. No spam."]
     };
     var steps=qa(".js-step"), bars=qa(".js-prog i");
 
-    function markStart(){ if(started)return; started=true; track("ib_form_start"); }
+    function markStart(){ if(started)return; started=true; ev("ib_form_start",{step:step}); }
 
     function paint(){
       [].forEach.call(steps,function(s){s.classList.toggle("on",+s.getAttribute("data-step")===step);});
@@ -906,6 +1069,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             b.classList.toggle("sel");
           }
           data[key]=[].map.call(c.querySelectorAll(".opt.sel"),function(o){return o.getAttribute("data-val");});
+          ev("ib_answer",{question:key,value:data[key].join(", ")});
+          persist();
           var em=q('.js-err[data-for="'+key+'"]'); if(em)em.classList.remove("show");
           if(key==="city"){
             var ow=q(".js-othercity-wrap"); var hasOther=data.city.indexOf("Other")>-1;
@@ -916,6 +1081,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         [].forEach.call(c.querySelectorAll(".opt"),function(o){o.classList.remove("sel");});
         b.classList.add("sel");
         data[key]=val;
+        ev("ib_answer",{question:key,value:val});
+        persist();
         if(noadv){
           var em2=q('.js-err[data-for="'+key+'"]'); if(em2)em2.classList.remove("show");
           return;
@@ -939,14 +1106,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         return true;
       }
-      if(step===3){ if(data.urgency)return true; setErr("urgency",1); return false; }
-      if(step===4){
+      if(step===3){ if(data.leadsource)return true; setErr("leadsource",1); return false; }
+      if(step===4){ if(data.challenge)return true; setErr("challenge",1); return false; }
+      if(step===5){ if(data.capacity)return true; setErr("capacity",1); return false; }
+      if(step===6){ if(data.budget)return true; setErr("budget",1); return false; }
+      if(step===7){
         var ok=true;
         data.bizName=field("biz").value.trim();
         data.name=field("name").value.trim();
         data.phone=field("phone").value.replace(/\D/g,"");
-        var siteEl=field("site"); data.site=siteEl?siteEl.value.trim():"";
         var roleEl=field("role"); data.role=roleEl?roleEl.value:"";
+        var ctEl=field("calltime"); data.callTime=ctEl?ctEl.value:"Anytime";
+        var hhEl=field("howheard"); data.howHeard=hhEl?hhEl.value:"";
         data.consent=field("consent").checked;
         if(!data.bizName){setErr("biz",1);field("biz").classList.add("bad");ok=false;}
         if(!data.name){setErr("name",1);field("name").classList.add("bad");ok=false;}
@@ -962,27 +1133,108 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if(root.closest&&root.closest(".modal-overlay"))return;
       var h=q(".js-head"); if(h&&h.scrollIntoView)h.scrollIntoView({behavior:"smooth",block:"start"});
     }
-    function next(){ if(!validate())return; if(step<MAX){step++;paint();track("ib_step_view",{step:step});scrollTop();} else submit(); }
-    function back(){ if(step>1){step--;paint();track("ib_step_back",{step:step});scrollTop();} }
+    function next(){ if(!validate())return; if(step<MAX){step++;paint();persist();ev("ib_step_view",{step:step});scrollTop();} else submit(); }
+    function back(){ if(step>1){step--;paint();persist();ev("ib_step_back",{step:step});scrollTop();} }
     q(".js-next").addEventListener("click",next);
     q(".js-back").addEventListener("click",back);
     var ph=field("phone"); if(ph)ph.addEventListener("input",function(){markStart();this.value=this.value.replace(/\D/g,"").slice(0,10);});
     [].forEach.call(qa(".js-field"),function(f){ f.addEventListener("focus",markStart); });
 
-    function submit(){
-      var btn=q(".js-next"); btn.disabled=true; btn.textContent="Sending…";
+    /* Typed contact details are held as they're typed, not only on Continue —
+       a bounce on the last step must not lose a phone number. */
+    function syncFields(){
+      var co=field("cityother"); if(co)data.cityOtherText=co.value.trim();
+      var b=field("biz");   if(b)data.bizName=b.value.trim();
+      var n=field("name");  if(n)data.name=n.value.trim();
+      var p=field("phone"); if(p)data.phone=p.value.replace(/\D/g,"");
+      var r=field("role");  if(r)data.role=r.value;
+      var ct=field("calltime"); if(ct)data.callTime=ct.value;
+      var h=field("howheard"); if(h)data.howHeard=h.value;
+      var c=field("consent");  if(c)data.consent=c.checked;
+    }
+    [].forEach.call(qa(".js-field"),function(f){
+      var ev=(f.tagName==="SELECT"||f.type==="checkbox")?"change":"input";
+      f.addEventListener(ev,function(){ syncFields(); persist(); });
+    });
+
+    /* Replay a saved session back into this mount's DOM. */
+    function restoreUI(){
+      if(!saved)return;
+      [].forEach.call(qa(".js-opts"),function(c){
+        var key=c.getAttribute("data-key"), val=data[key];
+        var chosen=(val instanceof Array)?val:(val?[val]:[]);
+        [].forEach.call(c.querySelectorAll(".opt"),function(o){
+          o.classList.toggle("sel",chosen.indexOf(o.getAttribute("data-val"))>-1);
+        });
+      });
+      var ow=q(".js-othercity-wrap");
+      if(ow&&(data.city||[]).indexOf("Other")>-1)ow.style.display="block";
+      var co=field("cityother"); if(co)co.value=data.cityOtherText||"";
+      var b=field("biz");   if(b)b.value=data.bizName||"";
+      var n=field("name");  if(n)n.value=data.name||"";
+      var p=field("phone"); if(p)p.value=data.phone||"";
+      var r=field("role");  if(r)r.value=data.role||"";
+      var ct=field("calltime"); if(ct)ct.value=data.callTime||"Anytime";
+      var h=field("howheard"); if(h)h.value=data.howHeard||"";
+      var c=field("consent");  if(c)c.checked=!!data.consent;
+    }
+
+    /* Lead score → prioritise which businesses the team calls first.
+       Hot ≥70 · Warm 40–69 · Nurture <40. See QUESTIONNAIRE.md. */
+    function scoreLead(){
+      var s=0;
+      if(data.budget==="₹2.5L+")s+=40;
+      else if(data.budget==="₹2–2.5L")s+=30;
+      else if(data.budget==="₹1–2L")s+=25;
+      else if(data.budget==="₹50k–1L")s+=12;
+      else if(data.budget==="Under ₹50k")s+=5;
+      else if(data.budget==="Nothing yet")s-=5;    /* referral-only — low fit */
+
+      /* Capacity: can they actually service exclusive clients? */
+      if(data.capacity==="10+"||data.capacity==="6–10")s+=20;
+      else if(data.capacity==="3–5")s+=12;
+      else if(data.capacity==="Not sure")s-=10;
+
+      /* Already paying someone for leads — we displace a bill, not create one. */
+      if(data.leadsource==="Justdial / IndiaMART"||data.leadsource==="Agency")s+=15;
+      else if(data.leadsource==="Facebook / Instagram ads"||data.leadsource==="Google ads")s+=10;
+
+      if(data.challenge==="Shared with competitors"||data.challenge==="Not serious")s+=20;
+      if(data.role==="Owner / Founder")s+=10;
+      if(data.segments.length&&data.segments.indexOf("All / Full-service")===-1)s+=5;
+      return s;
+    }
+    function tierFor(s){ return s>=70?"Hot":s>=40?"Warm":"Nurture"; }
+    /* Which plan sales opens with — never pitch premium to a one-man referral shop. */
+    function planFor(){
+      var bigBudget=(data.budget==="₹1–2L"||data.budget==="₹2–2.5L"||data.budget==="₹2.5L+");
+      var bigCapacity=(data.capacity==="6–10"||data.capacity==="10+");
+      return (bigBudget||bigCapacity)?"Premium":"Base";
+    }
+    /* Relative conversion value by tier — feeds value-based bidding in Google/Meta. */
+    function valueFor(t){ return t==="Hot"?100:t==="Warm"?50:10; }
+
+    function buildPayload(){
       var hp=q(".js-hp"); var hpVal=hp?hp.value:"";
       var elapsed=Math.round((Date.now()-mountTime)/1000);
       var suspectBot=(hpVal!=="")||(elapsed<3);
+      var leadScore=scoreLead(), leadTier=tierFor(leadScore), planFit=planFor();
       var payload={
         business_name:data.bizName,
         contact_name:data.name,
         phone:"+91"+data.phone,
         segments:(data.segments&&data.segments.length)?data.segments.join(", "):"",
         city:cityStr(),
-        urgency:data.urgency,
+        current_lead_source:data.leadsource,
+        biggest_challenge:data.challenge,
+        monthly_capacity:data.capacity,
+        marketing_budget:data.budget,
         role:data.role,
-        website:data.site,
+        best_time_to_call:data.callTime,
+        how_heard:data.howHeard,
+        lead_score:leadScore,
+        lead_tier:leadTier,
+        plan_fit:planFit,
         consent:data.consent?"Yes":"No",
         source_url:location.href,
         ad_source:(location.search||""),
@@ -990,51 +1242,105 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         suspected_bot:suspectBot?"yes":"no",
         _gotcha:hpVal,
         submitted_at:new Date().toISOString(),
-        _subject:"New Interior bazzar enquiry — "+(data.bizName||"website")
+        _subject:"["+leadTier+" · "+leadScore+" · "+planFit+"] New enquiry — "+(data.bizName||"website")+" · "+(data.budget||"budget n/a")
       };
-      // Send to Formspree behind the scenes, then reveal the thank-you + WhatsApp.
-      fetch(ENDPOINT,{
+      return {payload:payload,suspectBot:suspectBot,leadScore:leadScore,leadTier:leadTier,planFit:planFit,elapsed:elapsed};
+    }
+
+    /* fetch() only rejects on a network failure — a 4xx/5xx from Formspree resolves
+       normally. Without this check a rejected lead would still fire a conversion and
+       show the thank-you, so the enquiry is lost twice: to us, and to the ad platform. */
+    function sendLead(){
+      var ctx=buildPayload();
+      return fetch(ENDPOINT,{
         method:"POST",
         headers:{"Accept":"application/json","Content-Type":"application/json"},
-        body:JSON.stringify(payload)
-      })
-      .then(function(){
-        if(!suspectBot){
-          /* GTM listens for 'ib_lead_submit' — map it to GA4 generate_lead + a
-             Google Ads conversion tag inside the container. Params below are
-             surfaced as dataLayer variables for reporting / value-based bidding. */
-          track("ib_lead_submit",{
-            conversion:true,
-            currency:"INR",
-            value:0,                       /* set a per-enquiry value in GTM if you bid on value */
-            lead_segments:payload.segments,
-            lead_city:payload.city,
-            lead_urgency:payload.urgency,
-            lead_role:payload.role||"",
-            form_seconds:elapsed
-          });
-          try{if(window.fbq)fbq('track','Lead');}catch(e){}
-          try{if(window.gtag)gtag('event','generate_lead',{currency:"INR",value:0});}catch(e){}
-        }
-      })
-      .catch(function(){})
-      .then(function(){ showThanks(); });
+        body:JSON.stringify(ctx.payload)
+      }).then(function(res){
+        if(!res.ok) throw new Error("HTTP "+res.status);
+        return ctx;
+      });
     }
-    function showThanks(){
+    function onSent(ctx){
+      clearState();
+      if(!ctx.suspectBot){
+        /* GTM listens for 'ib_lead_submit' — map it to GA4 generate_lead + a
+           Google Ads conversion tag inside the container. Params below are
+           surfaced as dataLayer variables for reporting / value-based bidding. */
+        var p=ctx.payload, leadValue=valueFor(ctx.leadTier);
+        ev("ib_lead_submit",{
+          conversion:true,
+          currency:"INR",
+          value:leadValue,               /* value scaled by lead tier for value-based bidding */
+          lead_tier:ctx.leadTier,
+          lead_score:ctx.leadScore,
+          plan_fit:ctx.planFit,
+          lead_segments:p.segments,
+          lead_city:p.city,
+          lead_budget:p.marketing_budget,
+          lead_source_now:p.current_lead_source,
+          lead_challenge:p.biggest_challenge,
+          lead_capacity:p.monthly_capacity,
+          lead_role:p.role||"",
+          lead_call_time:p.best_time_to_call||"",
+          lead_how_heard:p.how_heard||"",
+          form_seconds:ctx.elapsed
+        });
+        try{if(window.fbq)fbq('track','Lead',{value:leadValue,currency:"INR"});}catch(e){}
+        try{if(window.gtag)gtag('event','generate_lead',{currency:"INR",value:leadValue});}catch(e){}
+      }
+      showThanks(false);
+    }
+    function onFailed(err){
+      /* No conversion event: the lead never landed. Answers stay on the device so
+         the visitor can retry, and WhatsApp becomes the fallback channel. */
+      ev("ib_lead_error",{reason:(err&&err.message)||"network"});
+      persist();
+      showThanks(true);
+    }
+    function submit(){
+      var btn=q(".js-next"); btn.disabled=true; btn.textContent="Sending…";
+      sendLead().then(onSent)["catch"](onFailed);
+    }
+    var retryBtn=q(".js-retry");
+    if(retryBtn)retryBtn.addEventListener("click",function(){
+      retryBtn.disabled=true; retryBtn.textContent="Sending…";
+      sendLead().then(onSent)["catch"](function(err){
+        retryBtn.disabled=false; retryBtn.textContent="Try sending again";
+        onFailed(err);
+      });
+    });
+
+    function showThanks(failed){
       q(".js-head").style.display="none";
       q(".js-body").style.display="none";
       var f=q(".js-foot"); if(f)f.style.display="none";
       var t=q(".js-thanks"); t.classList.add("on");
       var first=data.name?data.name.split(" ")[0]:"";
-      q(".js-thanksName").textContent=first?("Thank you, "+first+"."):"Thank you.";
+      q(".js-thanksName").textContent=failed
+        ? "Almost there."
+        : (first?("Thank you, "+first+"."):"Thank you.");
+
+      var tick=q(".js-tick"); if(tick)tick.style.display=failed?"none":"grid";
+      var lead=q(".js-thanksLead");
+      if(lead&&failed)lead.textContent="We couldn't submit your details just now — the connection dropped on our side.";
+      var ns=q(".js-nextsteps"); if(ns)ns.style.display=failed?"none":"grid";
+      var fn=q(".js-failnote"); if(fn)fn.classList.toggle("on",!!failed);
+      var wl=q(".js-walead"); if(wl&&failed)wl.textContent="Fastest route — send them straight to our team:";
+      var tw=q(".js-timerwrap"); if(tw)tw.style.display=failed?"none":"block";
       var msg="Hi Interior bazzar, I'd like to know more about exclusive verified enquiries.\n"
             +"Business: "+(data.bizName||"-")+"\n"
-            +"Segments: "+((data.segments&&data.segments.length)?data.segments.join(", "):"-")+"\n"
-            +"City: "+(cityStr()||"-")+"\n"
             +"Name: "+(data.name||"-")+"\n"
-            +"Timing: "+(data.urgency||"-");
+            +"Mobile: "+(data.phone?("+91"+data.phone):"-")+"\n"
+            +"Work: "+((data.segments&&data.segments.length)?data.segments.join(", "):"-")+"\n"
+            +"City: "+(cityStr()||"-")+"\n"
+            +"Leads today: "+(data.leadsource||"-")+"\n"
+            +"Main problem: "+(data.challenge||"-")+"\n"
+            +"Can take on: "+(data.capacity||"-")+" projects next month\n"
+            +"Monthly spend: "+(data.budget||"-")+"\n"
+            +"Best time to call: "+(data.callTime||"Anytime");
       var wa=q(".js-wa"); if(wa)wa.href="https://wa.me/918920898168?text="+encodeURIComponent(msg);
-      startTimer();
+      if(!failed)startTimer();
       if(t.scrollIntoView)t.scrollIntoView({behavior:"smooth",block:"center"});
     }
     function startTimer(){
@@ -1049,26 +1355,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
       tick(); timer=setInterval(tick,1000);
     }
+    restoreUI();
     paint();
+    /* The step the form opens on — so dropoff can be measured from step 1, not step 2.
+       The hero form is CSS-hidden below 920px but still mounts; an offsetParent of null
+       means it was never on screen, so it must not count as a form impression. */
+    if(root.offsetParent!==null) ev("ib_step_view",{step:step,resumed:saved?"yes":"no"});
     return {stop:function(){if(timer)clearInterval(timer);}};
   }
 
-  function mountInto(container){
+  function mountInto(container,placement){
     if(!container)return null;
     container.innerHTML="";
     var node=tpl.content.firstElementChild.cloneNode(true);
     container.appendChild(node);
-    return mountFunnel(node);
+    return mountFunnel(node,placement);
   }
 
-  mountInto(document.getElementById("heroFormSlot"));
-  mountInto(document.getElementById("closingFormSlot"));
+  mountInto(document.getElementById("heroFormSlot"),"hero");
+  mountInto(document.getElementById("closingFormSlot"),"closing");
 
   var modal=document.getElementById("modal");
   var modalBody=document.getElementById("modalBody");
   var inst=null;
-  function openModal(){ inst=mountInto(modalBody); modal.classList.add("on"); document.body.classList.add("no-scroll"); track("ib_modal_open"); }
-  function closeModal(){ modal.classList.remove("on"); document.body.classList.remove("no-scroll"); if(inst&&inst.stop)inst.stop(); }
+  var lastFocused=null;
+  function focusables(){
+    return [].filter.call(
+      modal.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])'),
+      function(el){ return !el.disabled && el.offsetParent!==null; }
+    );
+  }
+  function openModal(){
+    lastFocused=document.activeElement;
+    inst=mountInto(modalBody,"modal");
+    modal.classList.add("on");
+    modal.setAttribute("aria-hidden","false");   /* was left as "true" while visible */
+    document.body.classList.add("no-scroll");
+    var f=focusables(); if(f.length)f[0].focus();
+    track("ib_modal_open",{funnel:"modal"});
+  }
+  function closeModal(){
+    modal.classList.remove("on");
+    modal.setAttribute("aria-hidden","true");
+    document.body.classList.remove("no-scroll");
+    if(inst&&inst.stop)inst.stop();
+    if(lastFocused&&lastFocused.focus)lastFocused.focus();  /* return focus to the CTA that opened it */
+  }
+  /* Keep Tab inside the dialog while it's open. */
+  modal.addEventListener("keydown",function(e){
+    if(e.key!=="Tab"||!modal.classList.contains("on"))return;
+    var f=focusables(); if(!f.length)return;
+    var first=f[0], last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey&&document.activeElement===last){ e.preventDefault(); first.focus(); }
+  });
   modal.addEventListener("click",function(e){ if(e.target===modal||e.target.classList.contains("js-mclose"))closeModal(); });
   document.addEventListener("keydown",function(e){
     if(e.key!=="Escape")return;
