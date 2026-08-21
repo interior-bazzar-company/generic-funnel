@@ -982,6 +982,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 (function(){
   "use strict";
   var ENDPOINT="https://formspree.io/f/xwvjvrjr";
+  /* The deal endpoint: creates the enquiry in the admin pipeline AND answers with
+     the rep it was routed to, which is what the WhatsApp hand-off below dials.
+
+     The rotation is PER FUNNEL and lives server-side — a premium-funnel submission
+     never spends a generic turn, and a number that already has an open deal comes
+     back with the rep it already has, so one customer never ends up with two
+     salespeople. That is why `funnel` on the payload matters.
+
+     Fails soft: a network error leaves routedPhone empty, WhatsApp falls back to
+     the desk line, and the Formspree submit still runs. A dead API must never cost
+     us the lead. */
+  var DEAL_API="https://stage.interiorbazzar.com/api/v1/funnel-lead/";
+  var WA_FALLBACK="918920898168";
+  var routedPhone="", dealRef="";
   var tpl=document.getElementById("funnelTpl");
 
   /* Partial answers survive a bounce, a reload, or a failed submit. Held on the
@@ -1222,6 +1236,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var suspectBot=(hpVal!=="")||(elapsed<3);
       var leadScore=scoreLead(), leadTier=tierFor(leadScore), planFit=planFor();
       var payload={
+        /* Which rotation this lead belongs to. The backend keys its round-robin
+           counter off this, so it must stay "generic-funnel". */
+        funnel:"generic-funnel",
         business_name:data.bizName,
         contact_name:data.name,
         phone:"+91"+data.phone,
@@ -1252,12 +1269,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     /* fetch() only rejects on a network failure — a 4xx/5xx from Formspree resolves
        normally. Without this check a rejected lead would still fire a conversion and
        show the thank-you, so the enquiry is lost twice: to us, and to the ad platform. */
-    function sendLead(){
-      var ctx=buildPayload();
-      return fetch(ENDPOINT,{
+    /* Creates the deal and resolves the rep. Never rejects: the pipeline write is
+       not allowed to fail the submit the visitor is watching. */
+    function createDeal(payload){
+      return fetch(DEAL_API,{
         method:"POST",
         headers:{"Accept":"application/json","Content-Type":"application/json"},
-        body:JSON.stringify(ctx.payload)
+        body:JSON.stringify(payload)
+      }).then(function(r){return r.json();}).then(function(json){
+        var d=(json&&json.data)||{};
+        if(d.phoneNumber)routedPhone=String(d.phoneNumber).replace(/\D/g,"");
+        if(d.ref)dealRef=d.ref;
+      })["catch"](function(){});
+    }
+    function sendLead(){
+      var ctx=buildPayload();
+      return createDeal(ctx.payload).then(function(){
+        ctx.payload.routed_phone=routedPhone;
+        ctx.payload.deal_ref=dealRef;
+        return fetch(ENDPOINT,{
+          method:"POST",
+          headers:{"Accept":"application/json","Content-Type":"application/json"},
+          body:JSON.stringify(ctx.payload)
+        });
       }).then(function(res){
         if(!res.ok) throw new Error("HTTP "+res.status);
         return ctx;
@@ -1341,7 +1375,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             +"Can take on: "+(data.capacity||"-")+" projects next month\n"
             +"Monthly spend: "+(data.budget||"-")+"\n"
             +"Best time to call: "+(data.callTime||"Anytime");
-      var wa=q(".js-wa"); if(wa)wa.href="https://wa.me/918920898168?text="+encodeURIComponent(msg);
+      /* Hands off to the rep this lead was actually routed to. Falls back to the
+         desk line when the deal call didn't answer — a wrong rep is worse than a
+         shared inbox, because the customer reaches someone with no record of them. */
+      var wa=q(".js-wa");
+      if(wa)wa.href="https://wa.me/"+(routedPhone?("91"+routedPhone.slice(-10)):WA_FALLBACK)+"?text="+encodeURIComponent(msg);
 
       /* Give the completed state a URL. Lets Google Ads use a destination-URL conversion
          and lets you build a "reached thank-you" audience without depending on the event
