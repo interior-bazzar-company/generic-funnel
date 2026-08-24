@@ -992,8 +992,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
      Fails soft: a network error leaves routedPhone empty, WhatsApp falls back to
      the desk line, and the Formspree submit still runs. A dead API must never cost
-     us the lead. */
-  var DEAL_API="https://stage.interiorbazzar.com/api/v1/funnel-lead/";
+     us the lead.
+
+     LIVE: PROD is the only answer that counts — the rep and the ref the WhatsApp
+     hand-off uses come from there. DEAL_API_TEST is a copy of the same submission
+     to dev so the flow stays observable there; its response is DISCARDED and its
+     failure is invisible. Never read a routed number off it: dev runs its own
+     rotation and would hand the customer the wrong rep. */
+  var DEAL_API="https://prod.interiorbazzar.com/api/v1/funnel-lead/";
+  var DEAL_API_TEST="https://dev.interiorbazzar.com/api/v1/funnel-lead/";
   var WA_FALLBACK="918920898168";
   var routedPhone="", dealRef="";
   var tpl=document.getElementById("funnelTpl");
@@ -1272,6 +1279,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     /* Creates the deal and resolves the rep. Never rejects: the pipeline write is
        not allowed to fail the submit the visitor is watching. */
     function createDeal(payload){
+      /* Fire-and-forget mirror to dev. Deliberately not awaited and not chained
+         into the promise below: a dev outage must not delay or fail the prod
+         submission the visitor is waiting on. */
+      try{
+        fetch(DEAL_API_TEST,{
+          method:"POST",
+          headers:{"Accept":"application/json","Content-Type":"application/json"},
+          body:JSON.stringify(payload),
+          keepalive:true
+        })["catch"](function(){});
+      }catch(e){}
       return fetch(DEAL_API,{
         method:"POST",
         headers:{"Accept":"application/json","Content-Type":"application/json"},
